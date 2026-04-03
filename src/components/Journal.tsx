@@ -125,7 +125,7 @@ const steps = [
             label: "Cockpit",
             title: "Detalhamento Lógico",
             desc: "Limpeza minuciosa de cada fresta, botão e costura do interior.",
-            image: "mclaren_steering_wheel_detail_1775250416086_rev_1775251402975.png"
+            image: "mclaren_steering_wheel_detail.png"
           },
           {
             label: "Couro",

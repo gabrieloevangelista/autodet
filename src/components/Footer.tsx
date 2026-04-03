@@ -81,8 +81,8 @@ export default function Footer() {
             © {new Date().getFullYear()} AUTODET STUDIO. TODOS OS DIREITOS RESERVADOS.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-gray-600 hover:text-gray-300 text-xs font-mono">TERMOS</a>
-            <a href="#" className="text-gray-600 hover:text-gray-300 text-xs font-mono">PRIVACIDADE</a>
+            <a href="/termos" className="text-gray-600 hover:text-gray-300 text-xs font-mono">TERMOS</a>
+            <a href="/privacidade" className="text-gray-600 hover:text-gray-300 text-xs font-mono">PRIVACIDADE</a>
           </div>
         </div>
       </div>
