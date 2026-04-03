@@ -17,7 +17,7 @@ const steps = [
         label: "Processo",
         title: "Snow Foam",
         desc: "Pré-lavagem com espuma densa para encapsular a sujeira mais pesada.",
-        image: "porsche_snow_foam_detailing_1775250379608.png"
+        image: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800&q=80"
       },
       {
         label: "Ferramenta",
