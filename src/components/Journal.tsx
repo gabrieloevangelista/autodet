@@ -17,19 +17,19 @@ const steps = [
         label: "Processo",
         title: "Snow Foam",
         desc: "Pré-lavagem com espuma densa para encapsular a sujeira mais pesada.",
-        image: "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800&q=80"
+        image: "/images/snow-foam-luxury.jpg"
       },
       {
         label: "Ferramenta",
         title: "Pincéis Macios",
         desc: "Detalhando emblemas e grades com cerdas naturais de javali.",
-        image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=800&q=80"
+        image: "/images/brush-detailing.jpg"
       },
       {
         label: "Acabamento",
         title: "Secagem Segura",
         desc: "Toalhas de microfibra de alta gramatura e ar filtrado.",
-        image: "https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=800&q=80"
+        image: "/images/drying-luxury.jpg"
       }
     ]
   },
@@ -44,13 +44,13 @@ const steps = [
         label: "Técnica",
         title: "Clay Bar",
         desc: "Barra de argila especial atua na remoção de overspray e poluição.",
-        image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&q=80"
+        image: "/images/clay-bar.jpg"
       },
       {
         label: "Detecção",
         title: "Medição de Verniz",
         desc: "Uso de medidor ultrassônico para garantir segurança no processo.",
-        image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=800&q=80"
+        image: "/images/paint-gauge.jpg"
       },
       {
         label: "Análise",
@@ -77,13 +77,13 @@ const steps = [
         label: "Abrasivos",
         title: "Compostos Alemães",
         desc: "Micro-abrasivos que quebram durante o uso para brilho final.",
-        image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+        image: "/images/polishing-compound.jpg"
       },
       {
         label: "Uso",
         title: "Boina de Lã",
         desc: "Corte pesado para remoção de defeitos severos no verniz.",
-        image: "https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=800&q=80"
+        image: "/images/wool-pad-polishing.jpg"
       }
     ]
   },
@@ -104,13 +104,13 @@ const steps = [
         label: "Repelência",
         title: "Hidrofobia",
         desc: "Tensão superficial elevada que impede a aderência de sujeira.",
-        image: "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=800&q=80"
+        image: "/images/hydrophobic-beading.jpg"
       },
       {
         label: "Equipamento",
         title: "Luz Infravermelha",
         desc: "Aceleração do tempo de cura para máxima dureza do coating.",
-        image: "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800&q=80"
+        image: "/images/infrared-curing.jpg"
       }
     ]
   },
@@ -129,15 +129,15 @@ const steps = [
           },
           {
             label: "Couro",
-            title: "Hidratação Fosca",
-            desc: "Devolvendo a textura original de fábrica sem brilho artificial.",
-            image: "https://images.unsplash.com/photo-1563720360-c1e1a0ee0a54?w=800&q=80"
+        title: "Hidratação Fosca",
+        desc: "Devolvendo a textura original de fábrica sem brilho artificial.",
+        image: "/images/leather-conditioning.jpg"
           },
           {
             label: "Filtro",
-            title: "Oxi-Sanitização",
-            desc: "Eliminação de odores e bactérias através de gerador de ozônio.",
-            image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&q=80"
+        title: "Oxi-Sanitização",
+        desc: "Eliminação de odores e bactérias através de gerador de ozônio.",
+        image: "/images/ozone-sanitization.jpg"
           }
         ]
       }
