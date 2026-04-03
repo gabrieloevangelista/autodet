@@ -131,7 +131,7 @@ const steps = [
             label: "Couro",
             title: "Hidratação Fosca",
             desc: "Devolvendo a textura original de fábrica sem brilho artificial.",
-            image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800&q=80"
+            image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
           },
           {
             label: "Filtro",
