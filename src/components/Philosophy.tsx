@@ -40,7 +40,7 @@ export default function Philosophy() {
     <section ref={philContainerRef} id="philosophy" className="py-32 md:py-48 bg-[#050505] relative overflow-hidden flex items-center justify-center min-h-[80vh]">
       <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?q=80&w=3840&auto=format&fit=crop" className="w-full h-full object-cover" alt="Luxury Porsche Detail" />
+        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=3840&auto=format&fit=crop" className="w-full h-full object-cover" alt="Luxury Car Detail" />
       </div>
       
       <div className="max-w-[1000px] mx-auto px-6 relative z-10 text-center">
