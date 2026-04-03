@@ -1,0 +1,872 @@
+<html lang="pt-BR" class="antialiased"><head>
+<script>
+try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral="1fd2949a-d22c-431b-92bf-02d4ad04ee24";window.parent.document.cookie="promotekit_referral=1fd2949a-d22c-431b-92bf-02d4ad04ee24;path=/;domain=.aura.build;max-age=31536000"}}catch(e){}
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AUTODET. | Estética Automotiva Premium a Domicílio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+
+
+</head>
+
+<body class="bg-[#050505] text-[#FFFFFF] font-['Inter',sans-serif] m-0 overflow-x-hidden opacity-0 cursor-default selection:bg-[#E63946] selection:text-white text-sm sm:text-base leading-relaxed" style="opacity: 0;">
+  
+  <!-- NOISE OVERLAY -->
+  <div style="position: fixed; inset: 0; pointer-events: none; z-index: 9999; opacity: 0.04; background-image: url('data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.8\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\'/%3E%3C/svg%3E');"></div>
+
+  <!-- PRELOADER -->
+  <div id="loader" class="fixed inset-0 bg-[#050505] z-[10000] flex justify-center items-center text-white">
+    <div class="overflow-hidden mb-6">
+      <div id="loader-counter" class="font-['Space_Grotesk',sans-serif] text-8xl md:text-9xl font-medium tracking-tighter leading-none translate-y-full pb-2">0</div>
+    </div>
+    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-white/10 overflow-hidden">
+      <div id="loader-progress" class="w-0 h-full bg-[#E63946]"></div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="fixed top-0 w-full px-6 py-4 md:px-12 md:py-8 flex justify-between items-center z-50 mix-blend-difference text-white">
+    <a href="#hero" class="flex items-center">
+      <h2 class="font-['Space_Grotesk',sans-serif] text-xl font-semibold tracking-tighter hover:opacity-80 transition-opacity">AUTODET.</h2>
+    </a>
+    <div class="hidden md:flex gap-8 text-xs font-medium tracking-widest uppercase opacity-80">
+      <a href="#route" class="hover:text-[#E63946] transition-colors">Serviços</a>
+      <a href="#journal" class="hover:text-[#E63946] transition-colors">Processo</a>
+      <a href="#roster" class="hover:text-[#E63946] transition-colors">Projetos</a>
+      <a href="#apply" class="hover:text-[#E63946] transition-colors">Agendar</a>
+    </div>
+    <button class="md:hidden group flex items-center justify-center">
+      <iconify-icon icon="solar:hamburger-menu-linear" class="w-6 h-6 group-hover:text-[#E63946] transition-colors" style="stroke-width: 1.5px;"></iconify-icon>
+    </button>
+  </nav>
+
+  <!-- WRAPPER -->
+  <div id="wrapper" class="relative z-10 bg-[#050505] mb-[100vh] shadow-[0_50px_100px_rgba(0,0,0,0.8)] rounded-b-[2rem]">
+    
+    <!-- HERO -->
+    <section class="h-screen relative flex items-center justify-center overflow-hidden" id="hero">
+      <div class="w-full h-full absolute top-0 right-0 bottom-0 left-0">
+        <img id="hero-img" src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&amp;w=3840&amp;auto=format&amp;fit=crop" class="brightness-[0.3] w-full h-full object-cover" alt="Premium Car Detailing">
+        
+        <div class="flex pointer-events-none bg-gradient-to-b from-transparent via-transparent to-[#050505] absolute top-0 right-0 bottom-0 left-0 items-center justify-center z-[5]">
+          <a href="#apply" class="pointer-events-auto md:w-40 md:h-40 flex items-center justify-center group cursor-pointer transition-transform duration-300 hover:scale-105 active:scale-95 bg-transparent w-32 h-32 rounded-full p-1.5">
+            <div class="flex flex-col overflow-hidden transition-all duration-300 bg-transparent w-full h-full border-white/20 border rounded-full relative items-center justify-center">
+              <div class="absolute inset-2 rounded-full border border-white/20 pointer-events-none transition-all duration-700 ease-out group-hover:scale-[0.85] group-hover:border-[#E63946]/40"></div>
+              
+              <div class="relative z-10 flex flex-col items-center gap-1 mt-1">
+                <span class="text-[10px] uppercase transition-colors duration-300 group-hover:text-[#E63946] drop-shadow-lg font-medium text-white/90 tracking-[0.2em]">Agendar</span>
+                <span class="text-xs md:text-sm font-medium tracking-[0.15em] text-white uppercase transition-colors duration-300 group-hover:text-[#E63946] drop-shadow-lg">Serviço</span>
+              </div>
+              
+              <div class="group-hover:opacity-100 transition-all duration-500 opacity-0 absolute left-1/2 -translate-x-1/2 top-[65%] w-16 md:w-20 h-px bg-gradient-to-r from-transparent via-[#E63946]/80 to-transparent shadow-[0_0_6px_rgba(230,57,70,0.5)]"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="relative z-10 w-full h-full flex flex-col justify-between pointer-events-none mix-blend-difference py-32 px-6 md:px-12">
+        <div class="overflow-hidden self-start">
+          <h1 id="hero-title-l" class="text-[15vw] leading-[0.8] tracking-[-0.06em] mix-blend-difference text-white font-medium translate-y-full block">
+            AUTO
+          </h1>
+        </div>
+        <div class="overflow-hidden self-end flex items-end gap-4">
+          <h1 id="hero-title-r" class="text-[15vw] leading-[0.8] tracking-[-0.06em] mix-blend-difference text-white font-normal italic translate-y-full block">
+            DET.
+          </h1>
+        </div>
+      </div>
+
+      <div class="absolute bottom-8 left-6 md:left-12 flex flex-col z-20 text-white mix-blend-difference md:bottom-12 gap-y-1">
+        <span class="md:text-sm uppercase flex items-center gap-2 text-xs font-medium tracking-[0.15em]">Estética Automotiva Premium <span class="w-6 h-[1px] bg-[#E63946]"></span></span>
+        <span class="md:text-sm uppercase text-xs font-medium text-gray-300 tracking-[0.15em]">Atendimento a Domicílio</span>
+      </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="py-20 md:py-32 px-6 md:px-20 max-w-[1600px] mx-auto relative z-20 bg-[#050505]">
+      <div class="grid lg:grid-cols-12 gap-6 lg:gap-12">
+        <div class="col-span-12 lg:col-span-4 flex flex-col justify-start border-t border-white/10 pt-4 mb-4 lg:mb-0">
+          <span class="text-xs font-mono text-[#E63946]">01 — FILOSOFIA</span>
+        </div>
+        <div class="col-span-12 lg:col-span-8 lg:col-start-5">
+          <h2 id="intro-scrub" class="font-['Space_Grotesk',sans-serif] md:text-5xl lg:text-6xl leading-[1.1] text-3xl font-medium tracking-tight max-w-6xl">
+            <span class="inline-block will-change-[color] text-[#ffffff26]">O&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">veículo&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">não&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">é&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">apenas&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">transporte.&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">É&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">uma&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">extensão&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">da&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">sua&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">identidade&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">—&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">para&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">inspirar,&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">para&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">impressionar,&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">para&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">viver.&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">Um&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">grande&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">desperdício&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">seria&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">nunca&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">vivenciar&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">o&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">seu&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">verdadeiro&nbsp;</span><span class="inline-block will-change-[color] text-[#ffffff26]">brilho.&nbsp;</span>
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROUTE MAP -> PACAKGES -->
+    <section id="route" class="z-20 border-white/5 border-t py-20 md:py-32 relative bg-[#050505]">
+      <div class="md:px-20 flex max-w-[1600px] mx-auto mb-12 px-6 items-end justify-between">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-2 h-2 rounded-full bg-[#E63946] shadow-[0_0_8px_#E63946]"></div>
+            <span class="text-xs font-medium uppercase tracking-widest text-gray-500">
+              Níveis de Detalhamento
+            </span>
+          </div>
+          <h2 class="font-['Space_Grotesk',sans-serif] text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight text-white">
+            PACOTES DE SERVIÇO
+          </h2>
+        </div>
+        <div class="hidden md:flex gap-4">
+          <div class="flex items-center gap-2">
+            <div class="w-3 h-[2px] bg-[#3B82F6]"></div>
+            <span class="text-xs font-mono uppercase text-gray-400">Serviço Premium</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="w-2 h-2 rounded-full border border-[#E63946]"></div>
+            <span class="text-xs font-mono uppercase text-gray-400">Adicional</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:px-20 w-full max-w-[1600px] mx-auto px-4">
+        <div class="relative w-full aspect-[4/5] lg:aspect-[21/9] bg-[#0A0A0A] border border-white/10 rounded-xl overflow-hidden flex flex-col lg:flex-row shadow-2xl">
+          
+          <!-- UI Panel -->
+          <div class="lg:w-80 lg:border-b-0 lg:border-r p-5 md:p-6 lg:p-8 flex flex-col z-20 shrink-0 bg-[#050505]/80 w-full border-white/10 border-b backdrop-blur-md">
+            <h3 class="text-xs font-mono text-[#E63946] mb-8 tracking-widest uppercase">Especificações</h3>
+            
+            <div class="space-y-6 mb-auto flex-1">
+              <div>
+                <span class="block text-xs uppercase tracking-widest text-gray-500 mb-1">Duração Média</span>
+                <span class="font-['Space_Grotesk',sans-serif] text-3xl font-normal text-white">04<span class="text-sm text-gray-400 mr-1">h</span>30<span class="text-sm text-gray-400">m</span></span>
+              </div>
+              <div>
+                <span class="block text-xs uppercase tracking-widest text-gray-500 mb-1">Proteção Externa</span>
+                <span class="font-['Space_Grotesk',sans-serif] text-3xl font-normal text-white">12 <span class="text-sm text-gray-400">meses</span></span>
+              </div>
+              <div>
+                <span class="block text-xs uppercase tracking-widest text-gray-500 mb-1">Cura Total</span>
+                <span class="font-['Space_Grotesk',sans-serif] text-3xl font-normal text-white">24 <span class="text-sm text-gray-400">horas</span></span>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/10 hidden lg:block">
+              <span class="block text-xs uppercase tracking-widest text-gray-500 mb-4">Etapas do Processo</span>
+              <ul class="space-y-3">
+                <li class="flex justify-between items-center group cursor-default">
+                  <span class="text-xs font-normal text-gray-400 group-hover:text-white transition-colors">01. Lavagem Premium</span>
+                  <span class="text-xs font-mono text-gray-600">INÍCIO</span>
+                </li>
+                <li class="flex justify-between items-center group cursor-default">
+                  <span class="text-xs font-normal text-gray-400 group-hover:text-white transition-colors">02. Descontaminação</span>
+                  <span class="text-xs font-mono text-gray-600">PREP</span>
+                </li>
+                <li class="flex justify-between items-center group cursor-default">
+                  <span class="text-xs font-normal text-gray-400 group-hover:text-white transition-colors">03. Correção Tinta</span>
+                  <span class="text-xs font-mono text-gray-600">POLIMENTO</span>
+                </li>
+                <li class="flex justify-between items-center group cursor-default">
+                  <span class="text-xs font-normal text-gray-400 group-hover:text-white transition-colors">04. Vitrificação</span>
+                  <span class="text-xs font-mono text-gray-600">SELANTE</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Abstract Auto BG Area -->
+          <div class="relative flex-1 bg-[#0A0A0A] overflow-hidden min-h-[300px] md:min-h-[400px]">
+            <img src="https://images.unsplash.com/photo-1611016186353-9af58c69a533?q=80&amp;w=2160&amp;auto=format&amp;fit=crop" alt="Abstract Car Surface" class="opacity-40 w-full h-full object-cover absolute inset-0 mix-blend-luminosity grayscale">
+            
+            <div class="absolute inset-0 pointer-events-none z-10">
+              <div class="absolute bg-[#E63946] shadow-[0_0_8px_#E63946] opacity-80" style="left: 70%; top: 75%; width: 10%; height: 2px;"></div>
+              <div class="absolute bg-[#E63946] shadow-[0_0_8px_#E63946] opacity-80" style="left: 70%; top: 60%; width: 2px; height: 15%;"></div>
+              <div class="absolute bg-[#E63946] shadow-[0_0_8px_#E63946] opacity-80" style="left: 55%; top: 60%; width: 15%; height: 2px;"></div>
+              <div class="absolute bg-[#E63946] shadow-[0_0_8px_#E63946] opacity-80" style="left: 55%; top: 20%; width: 2px; height: 40%;"></div>
+              <div class="absolute bg-[#E63946] shadow-[0_0_8px_#E63946] opacity-80" style="left: 35%; top: 20%; width: 20%; height: 2px;"></div>
+              <div class="absolute bg-[#E63946] shadow-[0_0_8px_#E63946] opacity-80" style="left: 35%; top: 20%; width: 2px; height: 45%;"></div>
+              <div class="absolute bg-[#E63946] shadow-[0_0_8px_#E63946] opacity-80" style="left: 15%; top: 65%; width: 20%; height: 2px;"></div>
+              <div class="absolute bg-[#E63946] shadow-[0_0_8px_#E63946] opacity-80" style="left: 15%; top: 65%; width: 2px; height: 20%;"></div>
+            </div>
+
+            <!-- Interactive Points -->
+            <div class="absolute z-30 flex flex-col items-center group cursor-pointer" style="left: 76%; top: 60%;">
+              <div class="border-[#E63946] group-hover:bg-[#E63946] transition-all duration-300 bg-[#0A0A0A] w-3 h-3 border-2 rounded-full shadow-[0_0_10px_rgba(230,57,70,0.5)]"></div>
+              <span class="absolute top-4 text-xs font-mono text-white tracking-widest uppercase bg-[#050505]/60 px-1.5 py-0.5 rounded backdrop-blur-md pointer-events-none drop-shadow-md">Lavagem</span>
+              <div class="absolute bottom-6 w-32 md:w-40 p-2 md:p-3 max-md:-translate-x-[60%] bg-[#050505] border border-white/10 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-2xl origin-bottom scale-95 group-hover:scale-100">
+                <p class="text-[10px] md:text-xs text-[#E63946] font-mono mb-1 uppercase tracking-widest">Passo 1 / Prep</p>
+                <p class="text-white text-xs md:text-sm font-medium tracking-tight">Premium Wash</p>
+                <p class="text-[10px] md:text-xs text-gray-500 mt-1 leading-tight">Limpeza profunda com snow foam e pincéis de detalhamento.</p>
+              </div>
+            </div>
+
+            <div class="absolute z-30 flex flex-col items-center group cursor-pointer" style="left: 55%; top: 18%;">
+              <div class="w-2.5 h-2.5 rounded-full bg-white group-hover:scale-150 transition-transform duration-300 shadow-[0_0_8px_rgba(255,255,255,0.4)]"></div>
+              <span class="absolute bottom-4 text-xs font-mono text-white tracking-widest uppercase bg-[#050505]/60 px-1.5 py-0.5 rounded backdrop-blur-md pointer-events-none drop-shadow-md whitespace-nowrap">Descontaminação</span>
+              <div class="absolute left-6 top-0 w-32 md:w-40 p-2 md:p-3 max-md:-translate-x-[40%] bg-[#050505] border border-white/10 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-2xl origin-left scale-95 group-hover:scale-100">
+                <p class="text-[10px] md:text-xs text-[#E63946] font-mono mb-1 uppercase tracking-widest">Passo 2 / Clay Bar</p>
+                <p class="text-white text-xs md:text-sm font-medium tracking-tight">Superfície Lisa</p>
+                <p class="text-[10px] md:text-xs text-gray-500 mt-1 leading-tight">Remoção de impurezas incrustadas no verniz da pintura.</p>
+              </div>
+            </div>
+
+            <div class="absolute z-30 flex flex-col items-center group cursor-pointer" style="left: 48%; top: 22%;">
+              <div class="w-3 h-3 rounded-full bg-[#0A0A0A] border-2 border-[#E63946] group-hover:bg-[#E63946] transition-all duration-300 shadow-[0_0_10px_rgba(230,57,70,0.5)]"></div>
+              <span class="absolute bottom-4 text-xs font-mono text-white tracking-widest uppercase bg-[#050505]/60 px-1.5 py-0.5 rounded backdrop-blur-md pointer-events-none drop-shadow-md">Polimento</span>
+              <div class="absolute md:left-6 top-1/2 max-md:left-1/2 max-md:-translate-x-1/2 max-md:top-full max-md:mt-4 -translate-y-1/2 max-md:translate-y-0 w-36 md:w-48 p-2 md:p-3 bg-[#050505] border border-white/10 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-2xl origin-left scale-95 group-hover:scale-100">
+                <p class="text-[10px] md:text-xs text-[#E63946] font-mono mb-1 uppercase tracking-widest">Passo 3 / Correção</p>
+                <p class="text-white text-xs md:text-sm font-medium tracking-tight">Polimento Técnico</p>
+                <p class="text-[10px] md:text-xs text-gray-500 mt-1 leading-tight">Correção de micro-riscos, hologramas e restauração do brilho.</p>
+                <div class="mt-2 pt-2 border-t border-white/5 hidden md:flex justify-between">
+                  <span class="text-[10px] md:text-xs text-gray-400 font-mono">BRILHO: 100%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute z-30 flex flex-col items-center group cursor-pointer" style="left: 37%; top: 71%;">
+              <div class="w-2.5 h-2.5 rounded-full bg-white group-hover:scale-150 transition-transform duration-300 shadow-[0_0_8px_rgba(255,255,255,0.4)]"></div>
+              <span class="absolute top-4 text-xs font-mono text-white tracking-widest uppercase bg-[#050505]/60 px-1.5 py-0.5 rounded backdrop-blur-md pointer-events-none drop-shadow-md">Vitrificação</span>
+              <div class="absolute bottom-6 w-32 md:w-40 p-2 md:p-3 max-md:-translate-x-1/2 max-md:left-1/2 bg-[#050505] border border-white/10 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-2xl origin-bottom scale-95 group-hover:scale-100">
+                <p class="text-[10px] md:text-xs text-[#E63946] font-mono mb-1 uppercase tracking-widest">Passo 4 / Selante</p>
+                <p class="text-white text-xs md:text-sm font-medium tracking-tight">Ceramic Coating 9H</p>
+                <p class="text-[10px] md:text-xs text-gray-500 mt-1 leading-tight">Aplicação de camada de nano cerâmica para proteção extrema.</p>
+              </div>
+            </div>
+
+            <div class="absolute z-30 flex flex-col items-center group cursor-pointer" style="left: 11%; top: 92%;">
+              <div class="relative flex items-center justify-center w-6 h-6">
+                <div class="absolute inset-0 rounded-full bg-[#E63946] opacity-20 animate-pulse"></div>
+                <div class="w-3 h-3 rounded-full bg-[#E63946] shadow-[0_0_12px_#E63946] group-hover:scale-125 transition-transform duration-300"></div>
+              </div>
+              <span class="absolute left-8 text-xs font-mono text-[#E63946] font-medium tracking-widest uppercase bg-[#050505]/80 px-1.5 py-0.5 rounded backdrop-blur-md pointer-events-none drop-shadow-md">Finalização</span>
+              <div class="absolute bottom-8 right-0 max-md:right-auto max-md:left-0 w-36 md:w-48 p-2 md:p-3 bg-[#050505] border border-[#E63946]/30 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none shadow-2xl origin-bottom-right scale-95 group-hover:scale-100">
+                <p class="text-[10px] md:text-xs text-[#E63946] font-mono mb-1 uppercase tracking-widest">Passo 5 / Entrega</p>
+                <p class="text-white text-xs md:text-sm font-medium tracking-tight">Inspeção de Qualidade</p>
+                <p class="text-[10px] md:text-xs text-gray-500 mt-1 leading-tight">Detalhamento interno final, condicionamento e entrega das chaves.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORIZ SCROLL SECTION -->
+    <section id="journal" class="overflow-hidden h-[100vh] border-white/10 border-t relative bg-[#050505] z-20 w-full">
+      <div id="horiz-wrap" class="flex w-[500%] h-full will-change-transform">
+        
+        <!-- DAY 1 / PASSO 1 -->
+        <div class="relative w-1/5 h-full flex flex-col md:flex-row items-center justify-evenly md:justify-between px-6 md:px-20 bg-[#050505] border-r border-white/10 pt-24 pb-8 md:py-0 overflow-hidden shrink-0">
+          <div class="absolute inset-0 z-0 pointer-events-none">
+            <img src="https://images.unsplash.com/photo-1600705722908-bab1e61c0b4d?q=80&amp;w=3840&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover opacity-30 grayscale mix-blend-luminosity" alt="Preparação e Lavagem">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent md:to-[#050505]/30"></div>
+          </div>
+          
+          <div class="relative z-10 w-full md:w-[45%] flex flex-col justify-center mt-6 md:mt-0">
+            <div class="flex items-center gap-4 mb-4 md:mb-6">
+              <span class="text-[10px] md:text-xs font-mono text-[#E63946] tracking-widest border border-[#E63946]/30 px-2 py-1 bg-[#E63946]/10">PASSO 01</span>
+              <span class="text-[10px] md:text-xs font-mono text-gray-500 tracking-widest">ETAPA 1 // PREPARAÇÃO</span>
+            </div>
+            <h2 class="font-['Space_Grotesk',sans-serif] text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white mb-4 md:mb-6">
+              LAVAGEM
+            </h2>
+            <p class="max-w-md text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+              Remoção segura de contaminantes soltos. O primeiro passo para revelar a verdadeira superfície do verniz, utilizando técnicas de lavagem detalhada sem toque agressivo.
+            </p>
+          </div>
+          
+          <div class="relative z-10 w-full md:w-[50%] shrink-0 pb-6 md:pb-0 perspective-[2000px]">
+            <div class="flex items-center gap-3 mb-4 pl-2">
+              <div class="w-1.5 h-1.5 bg-[#E63946] rounded-full animate-pulse shadow-[0_0_8px_#E63946]"></div>
+              <h3 class="text-white font-mono text-xs md:text-sm tracking-widest uppercase opacity-80">Foco Técnico</h3>
+            </div>
+            
+            <div class="grid grid-cols-2 grid-rows-2 gap-2 md:gap-3 h-[260px] sm:h-[320px] md:h-[400px] -skew-x-3 transform group/bento w-full">
+              <div class="col-span-1 row-span-2 relative overflow-hidden rounded-sm border border-white/10 bg-[#0A0A0A] group/card hover:border-white/30 transition-colors duration-500">
+                <div class="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                  <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800&amp;q=80" class="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" alt="Processo de Lavagem">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-[#050505]/40 to-transparent"></div>
+                <div class="relative z-10 p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                  <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#E63946] font-medium mb-1 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">Equipamento</span>
+                  <h4 class="text-white text-xs sm:text-sm md:text-base font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">Canhão de Espuma</h4>
+                  <p class="text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 line-clamp-3">Aplicação de Snow Foam para amolecer a sujeira antes de qualquer toque na pintura.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E63946] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+              </div>
+
+              <div class="col-span-1 row-span-1 relative overflow-hidden rounded-sm border border-white/10 bg-[#0A0A0A] group/card hover:border-white/30 transition-colors duration-500">
+                <div class="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                  <img src="https://images.unsplash.com/photo-1600705722908-bab1e61c0b4d?w=800&amp;q=80" class="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" alt="Activity">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-[#050505]/40 to-transparent"></div>
+                <div class="relative z-10 p-2.5 sm:p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                  <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#E63946] font-medium mb-0.5 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">Processo</span>
+                  <h4 class="text-white text-xs sm:text-sm font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">Dois Baldes</h4>
+                  <p class="text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 line-clamp-2">Garante que micro-riscos não sejam causados na lavagem.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E63946] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+              </div>
+
+              <div class="col-span-1 row-span-1 relative overflow-hidden rounded-sm border border-white/10 bg-[#0A0A0A] group/card hover:border-white/30 transition-colors duration-500">
+                <div class="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                  <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=800&amp;q=80" class="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" alt="Cuisine">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-[#050505]/40 to-transparent"></div>
+                <div class="relative z-10 p-2.5 sm:p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                  <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#E63946] font-medium mb-0.5 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">Produto</span>
+                  <h4 class="text-white text-xs sm:text-sm font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">Shampoo PH Neutro</h4>
+                  <p class="text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 line-clamp-2">Preserva ceras e selantes já existentes.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E63946] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DAY 2 / PASSO 2 -->
+        <div class="relative w-1/5 h-full flex flex-col md:flex-row items-center justify-evenly md:justify-between px-6 md:px-20 bg-[#0A0A0A] border-r border-white/10 pt-24 pb-8 md:py-0 overflow-hidden shrink-0">
+          <div class="absolute inset-0 z-0 pointer-events-none">
+            <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&amp;w=3840&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover opacity-30 grayscale mix-blend-luminosity" alt="Descontaminação">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent md:to-[#0A0A0A]/30"></div>
+          </div>
+
+          <div class="relative z-10 w-full md:w-[45%] flex flex-col justify-center mt-6 md:mt-0">
+            <div class="flex items-center gap-4 mb-4 md:mb-6">
+              <span class="text-[10px] md:text-xs font-mono text-[#E63946] tracking-widest border border-[#E63946]/30 px-2 py-1 bg-[#E63946]/10">PASSO 02</span>
+              <span class="text-[10px] md:text-xs font-mono text-gray-500 tracking-widest">ETAPA 2 // DESCONTAMINAÇÃO</span>
+            </div>
+            <h2 class="font-['Space_Grotesk',sans-serif] text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white mb-4 md:mb-6">
+              CORREÇÃO
+            </h2>
+            <p class="max-w-md text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+              Superfície que respira. Uma sequência curada de remoção química e física de ferro, seiva e asfalto, deixando a pintura lisa como um espelho.
+            </p>
+          </div>
+          
+          <div class="relative z-10 w-full md:w-[50%] shrink-0 pb-6 md:pb-0 perspective-[2000px]">
+            <div class="flex items-center gap-3 mb-4 pl-2">
+              <div class="w-1.5 h-1.5 bg-[#E63946] rounded-full animate-pulse shadow-[0_0_8px_#E63946]"></div>
+              <h3 class="text-white font-mono text-xs md:text-sm tracking-widest uppercase opacity-80">Foco Técnico</h3>
+            </div>
+            <div class="grid grid-cols-2 grid-rows-2 gap-2 md:gap-3 h-[260px] sm:h-[320px] md:h-[400px] -skew-x-3 transform group/bento w-full">
+              <div class="col-span-1 row-span-2 relative overflow-hidden rounded-sm border border-white/10 bg-[#0A0A0A] group/card hover:border-white/30 transition-colors duration-500">
+                <div class="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                  <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=1600&amp;q=80" class="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" alt="Hotel">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/40 to-transparent"></div>
+                <div class="relative z-10 p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                  <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#E63946] font-medium mb-1 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">Equipamento</span>
+                  <h4 class="text-white text-xs sm:text-sm md:text-base font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">Clay Bar Profissional</h4>
+                  <p class="text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 line-clamp-3">Massa de argila especializada para puxar contaminantes invisíveis do verniz.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E63946] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+              </div>
+              <div class="col-span-1 row-span-1 relative overflow-hidden rounded-sm border border-white/10 bg-[#0A0A0A] group/card hover:border-white/30 transition-colors duration-500">
+                <div class="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                  <img src="https://images.unsplash.com/photo-1600705723001-4962646d65f5?w=800&amp;q=80" class="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" alt="Activity">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/40 to-transparent"></div>
+                <div class="relative z-10 p-2.5 sm:p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                  <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#E63946] font-medium mb-0.5 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">Processo</span>
+                  <h4 class="text-white text-xs sm:text-sm font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">Iron Remover</h4>
+                  <p class="text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 line-clamp-2">Descontaminação ferrosa de aros e freios.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E63946] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+              </div>
+              <div class="col-span-1 row-span-1 relative overflow-hidden rounded-sm border border-white/10 bg-[#0A0A0A] group/card hover:border-white/30 transition-colors duration-500">
+                <div class="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                  <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&amp;q=80" class="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" alt="Cuisine">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/40 to-transparent"></div>
+                <div class="relative z-10 p-2.5 sm:p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                  <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#E63946] font-medium mb-0.5 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">Produto</span>
+                  <h4 class="text-white text-xs sm:text-sm font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">Solventes Seguros</h4>
+                  <p class="text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 line-clamp-2">Para manchas de piche e asfalto difíceis.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E63946] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DAY 3 / PASSO 3 -->
+        <div class="relative w-1/5 h-full flex flex-col md:flex-row items-center justify-evenly md:justify-between px-6 md:px-20 bg-[#111111] border-r border-white/10 pt-24 pb-8 md:py-0 overflow-hidden shrink-0">
+          <div class="absolute inset-0 z-0 pointer-events-none">
+            <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?q=80&amp;w=3840&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover opacity-30 grayscale mix-blend-luminosity" alt="Stage 3 Environment">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#111111] via-[#111111]/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent md:to-[#111111]/30"></div>
+          </div>
+
+          <div class="relative z-10 w-full md:w-[45%] flex flex-col justify-center mt-6 md:mt-0">
+            <div class="flex items-center gap-4 mb-4 md:mb-6">
+              <span class="text-[10px] md:text-xs font-mono text-[#E63946] tracking-widest border border-[#E63946]/30 px-2 py-1 bg-[#E63946]/10">PASSO 03</span>
+              <span class="text-[10px] md:text-xs font-mono text-gray-500 tracking-widest">ETAPA 3 // POLIMENTO TÉCNICO</span>
+            </div>
+            <h2 class="font-['Space_Grotesk',sans-serif] text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white mb-4 md:mb-6">
+              POLIMENTO
+            </h2>
+            <p class="max-w-md text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+              Traduzindo horas de trabalho em um reflexo absoluto. Feedback mecânico tátil que exige foco e técnica para nivelar o verniz sem comprometer a espessura.
+            </p>
+          </div>
+          
+          <div class="relative z-10 w-full md:w-[50%] shrink-0 pb-6 md:pb-0 perspective-[2000px]">
+            <div class="flex items-center gap-3 mb-4 pl-2">
+              <div class="w-1.5 h-1.5 bg-[#E63946] rounded-full animate-pulse shadow-[0_0_8px_#E63946]"></div>
+              <h3 class="text-white font-mono text-xs md:text-sm tracking-widest uppercase opacity-80">Foco Técnico</h3>
+            </div>
+            <div class="grid grid-cols-2 grid-rows-2 gap-2 md:gap-3 h-[260px] sm:h-[320px] md:h-[400px] -skew-x-3 transform group/bento w-full">
+              <div class="col-span-1 row-span-2 relative overflow-hidden rounded-sm border border-white/10 bg-[#050505] group/card hover:border-white/30 transition-colors duration-500">
+                <div class="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                  <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?w=800&amp;q=80" class="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" alt="Hotel">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#111111]/90 via-[#111111]/40 to-transparent"></div>
+                <div class="relative z-10 p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                  <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#E63946] font-medium mb-1 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">Equipamento</span>
+                  <h4 class="text-white text-xs sm:text-sm md:text-base font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">Politriz Roto-Orbital</h4>
+                  <p class="text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 line-clamp-3">Ação dupla para correção perfeita sem deixar marcas holográficas de máquina.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E63946] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+              </div>
+              <div class="col-span-1 row-span-1 relative overflow-hidden rounded-sm border border-white/10 bg-[#050505] group/card hover:border-white/30 transition-colors duration-500">
+                <div class="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                  <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=1600&amp;q=80" class="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" alt="Activity">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#111111]/90 via-[#111111]/40 to-transparent"></div>
+                <div class="relative z-10 p-2.5 sm:p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                  <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#E63946] font-medium mb-0.5 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">Processo</span>
+                  <h4 class="text-white text-xs sm:text-sm font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">Corte e Refino</h4>
+                  <p class="text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 line-clamp-2">Etapas sucessivas de compostos para brilho máximo.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E63946] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+              </div>
+              <div class="col-span-1 row-span-1 relative overflow-hidden rounded-sm border border-white/10 bg-[#050505] group/card hover:border-white/30 transition-colors duration-500">
+                <div class="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                  <img src="https://images.unsplash.com/photo-1503376712344-932fceb893dd?w=800&amp;q=80" class="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" alt="Cuisine">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#111111]/90 via-[#111111]/40 to-transparent"></div>
+                <div class="relative z-10 p-2.5 sm:p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                  <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#E63946] font-medium mb-0.5 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">Produto</span>
+                  <h4 class="text-white text-xs sm:text-sm font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">Boinas Alemãs</h4>
+                  <p class="text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 line-clamp-2">Combinação precisa de espumas e microfibras premium.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E63946] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DAY 4 / PASSO 4 -->
+        <div class="relative w-1/5 h-full flex flex-col md:flex-row items-center justify-evenly md:justify-between px-6 md:px-20 bg-[#0A0A0A] border-r border-white/10 pt-24 pb-8 md:py-0 overflow-hidden shrink-0">
+          <div class="absolute inset-0 z-0 pointer-events-none">
+            <img src="https://images.unsplash.com/photo-1619551734325-81aaf323686c?q=80&amp;w=3840&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover opacity-30 grayscale mix-blend-luminosity" alt="Stage 4 Environment">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#0A0A0A] via-[#0A0A0A]/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent md:to-[#0A0A0A]/30"></div>
+          </div>
+
+          <div class="relative z-10 w-full md:w-[45%] flex flex-col justify-center mt-6 md:mt-0">
+            <div class="flex items-center gap-4 mb-4 md:mb-6">
+              <span class="text-[10px] md:text-xs font-mono text-[#E63946] tracking-widest border border-[#E63946]/30 px-2 py-1 bg-[#E63946]/10">PASSO 04</span>
+              <span class="text-[10px] md:text-xs font-mono text-gray-500 tracking-widest">ETAPA 4 // PROTEÇÃO CERÂMICA</span>
+            </div>
+            <h2 class="font-['Space_Grotesk',sans-serif] text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white mb-4 md:mb-6">
+              PROTEÇÃO
+            </h2>
+            <p class="max-w-md text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+              Selando a perfeição sob uma camada vítrea. Um teste de balanceamento e tempo de cura garantindo repelência extrema contra elementos da natureza.
+            </p>
+          </div>
+          
+          <div class="relative z-10 w-full md:w-[50%] shrink-0 pb-6 md:pb-0 perspective-[2000px]">
+            <div class="flex items-center gap-3 mb-4 pl-2">
+              <div class="w-1.5 h-1.5 bg-[#E63946] rounded-full animate-pulse shadow-[0_0_8px_#E63946]"></div>
+              <h3 class="text-white font-mono text-xs md:text-sm tracking-widest uppercase opacity-80">Foco Técnico</h3>
+            </div>
+            <div class="grid grid-cols-2 grid-rows-2 gap-2 md:gap-3 h-[260px] sm:h-[320px] md:h-[400px] -skew-x-3 transform group/bento w-full">
+              <div class="col-span-1 row-span-2 relative overflow-hidden rounded-sm border border-white/10 bg-[#0A0A0A] group/card hover:border-white/30 transition-colors duration-500">
+                <div class="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                  <img src="https://images.unsplash.com/photo-1583267746897-ea908c8cb8ee?w=800&amp;q=80" class="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" alt="Hotel">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/40 to-transparent"></div>
+                <div class="relative z-10 p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                  <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#E63946] font-medium mb-1 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">Produto</span>
+                  <h4 class="text-white text-xs sm:text-sm md:text-base font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">Ceramic Coating 9H</h4>
+                  <p class="text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 line-clamp-3">Tecnologia de nano-sílica. Forma uma barreira de vidro flexível sobre o verniz original.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E63946] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+              </div>
+              <div class="col-span-1 row-span-1 relative overflow-hidden rounded-sm border border-white/10 bg-[#0A0A0A] group/card hover:border-white/30 transition-colors duration-500">
+                <div class="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                  <img src="https://images.unsplash.com/photo-1619551734325-81aaf323686c?w=800&amp;q=80" class="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" alt="Activity">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/40 to-transparent"></div>
+                <div class="relative z-10 p-2.5 sm:p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                  <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#E63946] font-medium mb-0.5 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">Processo</span>
+                  <h4 class="text-white text-xs sm:text-sm font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">Nivelamento</h4>
+                  <p class="text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 line-clamp-2">Remoção no tempo exato de flash para evitar manchas.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E63946] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+              </div>
+              <div class="col-span-1 row-span-1 relative overflow-hidden rounded-sm border border-white/10 bg-[#0A0A0A] group/card hover:border-white/30 transition-colors duration-500">
+                <div class="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                  <img src="https://images.unsplash.com/photo-1559314809-0d155014e29e?w=800&amp;q=80" class="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" alt="Cuisine">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/40 to-transparent"></div>
+                <div class="relative z-10 p-2.5 sm:p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                  <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#E63946] font-medium mb-0.5 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">Equipamento</span>
+                  <h4 class="text-white text-xs sm:text-sm font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">Microfibras Laser</h4>
+                  <p class="text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 line-clamp-2">Tecido sem bordas para lustro final seguro.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E63946] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DAY 5 / PASSO 5 -->
+        <div class="relative w-1/5 h-full flex flex-col md:flex-row items-center justify-evenly md:justify-between px-6 md:px-20 bg-[#050505] pt-24 pb-8 md:py-0 overflow-hidden shrink-0">
+          <div class="absolute inset-0 z-0 pointer-events-none">
+            <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&amp;w=3840&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover opacity-30 grayscale mix-blend-luminosity" alt="Stage 5 Environment">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent md:to-[#050505]/30"></div>
+          </div>
+
+          <div class="relative z-10 w-full md:w-[45%] flex flex-col justify-center mt-6 md:mt-0">
+            <div class="flex items-center gap-4 mb-4 md:mb-6">
+              <span class="text-[10px] md:text-xs font-mono text-[#E63946] tracking-widest border border-[#E63946]/30 px-2 py-1 bg-[#E63946]/10">PASSO 05</span>
+              <span class="text-[10px] md:text-xs font-mono text-gray-500 tracking-widest">ETAPA 5 // DETALHAMENTO INTERNO</span>
+            </div>
+            <h2 class="font-['Space_Grotesk',sans-serif] text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-white mb-4 md:mb-6">
+              ENTREGA
+            </h2>
+            <p class="max-w-md text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed font-light">
+              O sprint final para a perfeição. Limpeza profunda de couro, plásticos e tecidos, concluindo com uma inspeção minuciosa sob luzes de alta definição.
+            </p>
+          </div>
+          
+          <div class="relative z-10 w-full md:w-[50%] shrink-0 pb-6 md:pb-0 perspective-[2000px]">
+            <div class="flex items-center gap-3 mb-4 pl-2">
+              <div class="w-1.5 h-1.5 bg-[#E63946] rounded-full animate-pulse shadow-[0_0_8px_#E63946]"></div>
+              <h3 class="text-white font-mono text-xs md:text-sm tracking-widest uppercase opacity-80">Foco Técnico</h3>
+            </div>
+            <div class="grid grid-cols-2 grid-rows-2 gap-2 md:gap-3 h-[260px] sm:h-[320px] md:h-[400px] -skew-x-3 transform group/bento w-full">
+              <div class="col-span-1 row-span-2 relative overflow-hidden rounded-sm border border-white/10 bg-[#0A0A0A] group/card hover:border-white/30 transition-colors duration-500">
+                <div class="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                  <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800&amp;q=80" class="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" alt="Hotel">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-[#050505]/40 to-transparent"></div>
+                <div class="relative z-10 p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                  <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#E63946] font-medium mb-1 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">Processo</span>
+                  <h4 class="text-white text-xs sm:text-sm md:text-base font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">Hidratação de Couro</h4>
+                  <p class="text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 line-clamp-3">Devolve a textura fosca original e o cheiro autêntico sem aspecto gorduroso.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E63946] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+              </div>
+              <div class="col-span-1 row-span-1 relative overflow-hidden rounded-sm border border-white/10 bg-[#0A0A0A] group/card hover:border-white/30 transition-colors duration-500">
+                <div class="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                  <img src="https://images.unsplash.com/photo-1517456793572-1d8efd6dc135?w=800&amp;q=80" class="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" alt="Activity">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-[#050505]/40 to-transparent"></div>
+                <div class="relative z-10 p-2.5 sm:p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                  <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#E63946] font-medium mb-0.5 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">Equipamento</span>
+                  <h4 class="text-white text-xs sm:text-sm font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">Tornador</h4>
+                  <p class="text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 line-clamp-2">Limpeza minuciosa de difusores de ar e frestas.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E63946] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+              </div>
+              <div class="col-span-1 row-span-1 relative overflow-hidden rounded-sm border border-white/10 bg-[#0A0A0A] group/card hover:border-white/30 transition-colors duration-500">
+                <div class="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                  <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&amp;q=80" class="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" alt="Cuisine">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/90 via-[#050505]/40 to-transparent"></div>
+                <div class="relative z-10 p-2.5 sm:p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                  <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#E63946] font-medium mb-0.5 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">Final</span>
+                  <h4 class="text-white text-xs sm:text-sm font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">Inspeção LED</h4>
+                  <p class="text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 line-clamp-2">Revisão sob luzes Scangrip para garantir perfeição.</p>
+                </div>
+                <div class="absolute bottom-0 left-0 w-0 h-[2px] bg-[#E63946] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PARALLAX GRID -->
+    <section id="parallax-grid" class="py-20 md:py-32 px-6 md:px-20 max-w-[1600px] mx-auto bg-[#050505] overflow-hidden border-t border-transparent relative z-20">
+      <div class="mb-12 md:mb-24 flex justify-between items-end">
+        <h2 class="font-['Space_Grotesk',sans-serif] text-4xl md:text-5xl font-medium tracking-tight text-white">
+          RESULTADOS
+          <br>
+          PREMIUM
+        </h2>
+        <p class="text-xs font-mono text-gray-500 hidden md:block">
+          CERA / CERÂMICA / BRILHO
+        </p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 min-h-[120vh]">
+        <div class="parallax-col flex flex-col gap-4 md:gap-8 pt-10 md:pt-20">
+          <img src="https://images.unsplash.com/photo-1583267746897-ea908c8cb8ee?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" class="w-full aspect-[3/4] object-cover grayscale opacity-70 hover:opacity-100 transition-opacity rounded-sm" alt="Reflective Paint">
+          <img src="https://images.unsplash.com/photo-1600705723001-4962646d65f5?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" class="w-full aspect-[4/5] object-cover grayscale opacity-70 hover:opacity-100 transition-opacity rounded-sm" alt="Wheel Detailing">
+          <div class="p-8 flex flex-col justify-center aspect-[4/5] bg-[#0A0A0A] border border-white/5">
+            <span class="font-['Space_Grotesk',sans-serif] text-4xl text-white">9H</span>
+            <span class="text-xs text-[#E63946] mt-2 font-mono">Dureza Cerâmica</span>
+          </div>
+        </div>
+        <div class="parallax-col flex flex-col gap-4 md:gap-8">
+          <img src="https://images.unsplash.com/photo-1503376712344-932fceb893dd?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" class="w-full aspect-[3/4] object-cover grayscale opacity-70 hover:opacity-100 transition-opacity rounded-sm" alt="Sleek Angle">
+          <div class="p-8 border border-white/10 bg-[#0A0A0A] flex items-center justify-center text-center aspect-square">
+            <p class="font-mono text-[10px] md:text-xs leading-relaxed tracking-widest uppercase text-gray-400">
+              "O reflexo perfeito
+              <br><br>
+              exige paciência absoluta."
+              <br><br>
+              <span class="text-[#E63946]">— Autodet.</span>
+            </p>
+          </div>
+          <img src="https://images.unsplash.com/photo-1619551734325-81aaf323686c?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" class="w-full aspect-[4/3] object-cover grayscale opacity-70 hover:opacity-100 transition-opacity rounded-sm" alt="Water Beading">
+        </div>
+        <div class="parallax-col flex flex-col gap-4 md:gap-8 pt-40 hidden md:flex">
+          <div class="w-full aspect-[3/4] bg-[#0A0A0A] border border-white/5 text-white flex items-center justify-center">
+            <iconify-icon icon="solar:star-fall-linear" class="w-12 h-12 opacity-30 text-white" style="stroke-width: 1.5px;"></iconify-icon>
+          </div>
+          <img src="https://images.unsplash.com/photo-1550355291-bbee04a92027?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" class="w-full aspect-[4/5] object-cover grayscale opacity-70 hover:opacity-100 transition-opacity rounded-sm" alt="Interior Detail">
+        </div>
+      </div>
+    </section>
+
+    <!-- RECORDS SECTION -> SPECS -->
+    <section id="roster" class="py-24 md:py-48 bg-[#000000] border-t border-white/5 text-white relative z-20">
+      <div class="px-6 md:px-20 max-w-[1600px] mx-auto grid md:grid-cols-2 gap-12 md:gap-16">
+        <div class="reveal-item">
+          <span class="text-xs font-mono text-[#E63946] block mb-6 tracking-widest">
+            ESPECIFICAÇÕES DE SERVIÇO
+          </span>
+          <h2 class="font-['Space_Grotesk',sans-serif] text-4xl sm:text-5xl md:text-7xl font-medium tracking-tighter leading-none">
+            GARANTIA &amp;
+            <br>
+            TEMPO DE CURA
+          </h2>
+        </div>
+        <div class="flex flex-col gap-0 reveal-item">
+          <div class="flex justify-between items-baseline border-b border-white/10 py-6 group hover:pl-4 transition-all duration-300 cursor-default">
+            <span class="text-base sm:text-lg md:text-xl font-medium text-gray-400 group-hover:text-white transition-colors">
+              Vitrificação de Pintura (9H)
+            </span>
+            <span class="text-xs font-mono text-[#E63946]">3 ANOS</span>
+          </div>
+          <div class="flex justify-between items-baseline border-b border-white/10 py-6 group hover:pl-4 transition-all duration-300 cursor-default">
+            <span class="text-base sm:text-lg md:text-xl font-medium text-gray-400 group-hover:text-white transition-colors">
+              Polimento Técnico Comercial
+            </span>
+            <span class="text-xs font-mono text-[#E63946]">12 MESES</span>
+          </div>
+          <div class="flex justify-between items-baseline border-b border-white/10 py-6 group hover:pl-4 transition-all duration-300 cursor-default">
+            <span class="text-base sm:text-lg md:text-xl font-medium text-gray-400 group-hover:text-white transition-colors">
+              Higienização Interna Profunda
+            </span>
+            <span class="text-xs font-mono text-[#E63946]">6 MESES</span>
+          </div>
+          <div class="flex justify-between items-baseline border-b border-white/10 py-6 group hover:pl-4 transition-all duration-300 cursor-default">
+            <span class="text-base sm:text-lg md:text-xl font-medium text-gray-400 group-hover:text-white transition-colors">
+              Lavagem Detalhada Premium
+            </span>
+            <span class="text-xs font-mono text-[#E63946]">1 MÊS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY / SPACER -->
+    <section class="py-24 md:py-32 lg:py-48 flex flex-col items-center justify-center text-center px-6 relative overflow-hidden bg-[#050505]">
+      <h2 class="font-['Space_Grotesk',sans-serif] text-2xl sm:text-3xl md:text-5xl font-medium tracking-tight mb-8 relative z-10 text-white">
+        O brilho é o
+        <span class="text-[#E63946] italic font-light">foco mais puro.</span>
+      </h2>
+      <div class="max-w-lg text-gray-400 font-light leading-relaxed relative z-10">
+        Eliminamos imperfeições até que apenas o reflexo perfeito permaneça. Elevamos o padrão estético do seu veículo no conforto da sua residência, utilizando os melhores produtos do mercado mundial.
+      </div>
+
+      <div class="absolute inset-0 z-0 opacity-[0.1]" style="background-image: linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 40px 40px;"></div>
+    </section>
+
+    <div id="apply" class="w-full h-px"></div>
+  </div>
+    
+  <!-- FOOTER REVEAL -->
+  <footer class="fixed bottom-0 left-0 w-full h-screen bg-[#0A0A0A] z-0 flex items-center justify-center text-white border-t border-white/5">
+    <div class="z-10 text-center w-full max-w-4xl px-6 relative">
+      <div class="inline-flex gap-2 bg-white/5 border-white/10 border rounded-full mb-8 py-1.5 px-4 backdrop-blur-sm items-center footer-el">
+        <div class="w-1.5 h-1.5 rounded-full bg-[#E63946] animate-pulse shadow-[0_0_8px_#E63946]"></div>
+        <span class="text-[10px] md:text-xs uppercase text-gray-300 tracking-widest">
+          Agenda Aberta para este mês
+        </span>
+      </div>
+
+      <a href="mailto:contato@autodet.com.br" class="block group footer-el">
+        <h2 class="font-['Space_Grotesk',sans-serif] text-[10vw] leading-[0.8] font-medium tracking-tighter text-white group-hover:text-[#E63946] transition-colors duration-500">
+          AGENDAR AGORA
+        </h2>
+        <div class="h-[1px] w-0 group-hover:w-full bg-[#E63946] mx-auto transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] mt-4">
+        </div>
+      </a>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-left border-white/10 border-t mt-12 pt-8 md:mt-24 md:pt-12 footer-el">
+        <div class="flex flex-col gap-4">
+          <span class="text-xs uppercase tracking-widest text-gray-500 font-medium">
+            Redes
+          </span>
+          <a href="#" class="text-xs text-gray-400 hover:text-white transition-colors">Instagram</a>
+          <a href="#" class="text-xs text-gray-400 hover:text-white transition-colors">Facebook</a>
+          <a href="#" class="text-xs text-gray-400 hover:text-white transition-colors">YouTube</a>
+        </div>
+        <div class="flex flex-col gap-4">
+          <span class="text-xs uppercase tracking-widest text-gray-500 font-medium">
+            Atendimento
+          </span>
+          <p class="text-xs text-gray-400">Atendimento móvel<br>100% a domicílio</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <span class="text-xs uppercase tracking-widest text-gray-500 font-medium">
+            Contato
+          </span>
+          <a href="#" class="text-xs text-gray-400 hover:text-white transition-colors">contato@autodet.com.br</a>
+          <a href="#" class="text-xs text-gray-400 hover:text-white transition-colors">+55 11 99999-0000</a>
+        </div>
+        <div class="flex flex-col justify-between">
+          <span class="text-xs uppercase tracking-widest text-gray-500 font-medium">
+            © 2024
+          </span>
+          <div class="text-[10px] md:text-xs text-gray-600 uppercase tracking-widest">
+            Autodet. Estética Premium
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Initialize Lenis Smooth Scrolling
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        smoothTouch: false,
+      });
+
+      lenis.stop(); // Stop scroll during preload
+
+      // Sync Lenis with GSAP ScrollTrigger
+      gsap.registerPlugin(ScrollTrigger);
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
+      gsap.ticker.lagSmoothing(0, 0);
+
+      // Lock body temporarily
+      gsap.set("body", { opacity: 1 });
+      document.body.style.overflow = "hidden";
+
+      // 2. Preloader
+      const loaderCounter = document.getElementById("loader-counter");
+      const loaderProgress = document.getElementById("loader-progress");
+      
+      const tlLoader = gsap.timeline({
+        onComplete: () => {
+          document.body.style.overflow = "";
+          lenis.start();
+          ScrollTrigger.refresh(); 
+        }
+      });
+
+      tlLoader
+        .to(loaderCounter, { y: 0, duration: 1, ease: "power4.out" })
+        .to(loaderProgress, { width: "100%", duration: 1.5, ease: "power2.inOut" }, "-=0.5")
+        .to({ val: 0 }, { 
+          val: 100, 
+          duration: 1.5, 
+          ease: "power2.inOut",
+          onUpdate: function() {
+            loaderCounter.textContent = Math.round(this.targets()[0].val);
+          }
+        }, "-=1.5")
+        .to("#loader", { yPercent: -100, duration: 1, ease: "power4.inOut", delay: 0.2 })
+        .from("#hero-img", { scale: 1.2, duration: 1.5, ease: "power3.out" }, "-=0.8")
+        .to("#hero-title-l", { y: 0, duration: 1, ease: "power4.out" }, "-=1")
+        .to("#hero-title-r", { y: 0, duration: 1, ease: "power4.out" }, "-=0.8");
+
+      // 3. Intro Text Scrub
+      const introWords = document.querySelectorAll("#intro-scrub span");
+      if(introWords.length > 0) {
+        gsap.to(introWords, {
+          scrollTrigger: {
+            trigger: "#intro-scrub",
+            start: "top 80%",
+            end: "bottom 40%",
+            scrub: 1,
+          },
+          color: "#FFFFFF",
+          stagger: 0.1
+        });
+      }
+
+      // 4. Horizontal Scroll
+      const horizWrap = document.getElementById("horiz-wrap");
+      if(horizWrap) {
+        const getScrollAmount = () => horizWrap.scrollWidth - window.innerWidth;
+        const tween = gsap.to(horizWrap, {
+          x: () => -getScrollAmount(),
+          ease: "none",
+        });
+
+        ScrollTrigger.create({
+          trigger: "#journal",
+          start: "top top",
+          end: () => `+=${getScrollAmount()}`,
+          pin: true,
+          animation: tween,
+          scrub: 1,
+          invalidateOnRefresh: true,
+        });
+      }
+
+      // 5. Parallax Grid
+      gsap.utils.toArray(".parallax-col").forEach((col, i) => {
+        gsap.to(col, {
+          yPercent: i % 2 === 0 ? -15 : 15,
+          ease: "none",
+          scrollTrigger: {
+            trigger: "#parallax-grid",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+          }
+        });
+      });
+
+      // 6. Footer Reveal Elements
+      gsap.from(".footer-el", {
+        scrollTrigger: {
+          trigger: "footer",
+          start: "top 80%",
+          end: "bottom bottom",
+          scrub: 1
+        },
+        y: 30,
+        opacity: 0,
+        stagger: 0.1
+      });
+    });
+  </script>
+
+</body></html>
