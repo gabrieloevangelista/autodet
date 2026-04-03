@@ -47,7 +47,7 @@ export default function ParallaxGrid() {
           <div className="group relative overflow-hidden rounded-sm aspect-[4/5]">
             <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?q=80&w=2000" alt="Porsche 911 GT3" className="w-full h-full object-cover grayscale mix-blend-luminosity group-hover:scale-105 transition-transform duration-700" />
+            <img src="https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?q=80&w=2000" alt="Lavagem Detalhada Carro Luxo" className="w-full h-full object-cover grayscale mix-blend-luminosity group-hover:scale-105 transition-transform duration-700" />
             <div className="absolute bottom-6 left-6 z-20">
               <span className="text-white text-xs font-mono tracking-widest uppercase opacity-80">01</span>
               <h3 className="text-white text-xl font-medium mt-1">LAVAGEM DETALHADA</h3>
