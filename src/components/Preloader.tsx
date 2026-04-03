@@ -11,6 +11,8 @@ export default function Preloader() {
   const loaderRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
+    document.body.style.overflow = "hidden";
+
     // We must ensure the element is there to animate
     const tlLoader = gsap.timeline({
       onComplete: () => {

@@ -59,9 +59,9 @@ export default function Footer() {
           <div className="col-span-1 footer-anim">
             <h4 className="font-mono text-xs tracking-widest text-[#FACC15] mb-6">MENU</h4>
             <ul className="space-y-4">
-              <li><a href="#journal" className="text-gray-400 hover:text-white text-sm transition-colors">Processo</a></li>
-              <li><a href="#gallery" className="text-gray-400 hover:text-white text-sm transition-colors">Projetos</a></li>
-              <li><a href="#philosophy" className="text-gray-400 hover:text-white text-sm transition-colors">Filosofia</a></li>
+              <li><a href="/#journal" className="text-gray-400 hover:text-white text-sm transition-colors">Processo</a></li>
+              <li><a href="/#gallery" className="text-gray-400 hover:text-white text-sm transition-colors">Projetos</a></li>
+              <li><a href="/#philosophy" className="text-gray-400 hover:text-white text-sm transition-colors">Filosofia</a></li>
             </ul>
           </div>
 

@@ -45,11 +45,11 @@ export default function Philosophy() {
       
       <div className="max-w-[1000px] mx-auto px-6 relative z-10 text-center">
         <h2 className="font-space-grotesk text-5xl md:text-8xl lg:text-9xl font-bold tracking-tighter text-white uppercase italic leading-none mb-6">
-          <span ref={title1Ref} className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">RESPEITO</span>
-          <span ref={title2Ref} className="block text-[#FACC15]">À MÁQUINA.</span>
+          <span ref={title1Ref} className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">RIGOR</span>
+          <span ref={title2Ref} className="block text-[#FACC15]">ABSOLUTO.</span>
         </h2>
         <p ref={textRef} className="text-gray-400 text-lg md:text-2xl font-light max-w-2xl mx-auto leading-relaxed">
-          Não lavamos carros. Nós restauramos o estado de arte concebido pelos engenheiros, elevando o nível de exigência estética a um patamar singular.
+          Não entregamos limpeza; exercemos a custódia da perfeição técnica. Onde outros veem uma superfície, nós enxergamos um legado de engenharia que exige critério, precisão e uma estética atemporal.
         </p>
       </div>
     </section>

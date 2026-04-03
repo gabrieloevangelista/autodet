@@ -56,7 +56,7 @@ const steps = [
         label: "Análise",
         title: "Inspeção",
         desc: "Luzes Scangrip revelam a verdadeira condição da pintura.",
-        image: "ferrari_luxury_detailing_1775249767609.png"
+        image: "/images/scangrip-inspection.png"
       }
     ]
   },
@@ -71,7 +71,7 @@ const steps = [
         label: "Maquinário",
         title: "Roto-Orbital",
         desc: "Movimento preciso que evita o aquecimento excessivo da peça.",
-        image: "ferrari_polishing_detailing_1775250398202.png"
+        image: "/images/ferrari-polishing.png"
       },
       {
         label: "Abrasivos",
@@ -98,7 +98,7 @@ const steps = [
         label: "Produto",
         title: "Ceramic Coating",
         desc: "Barreira de nano-sílica que forma um escudo de vidro sobre o verniz.",
-        image: "ceramic_coating_water_beading_lamborghini_1775250436835.png"
+        image: "/images/ceramic-application.png"
       },
       {
         label: "Repelência",
@@ -125,7 +125,7 @@ const steps = [
             label: "Cockpit",
             title: "Detalhamento Lógico",
             desc: "Limpeza minuciosa de cada fresta, botão e costura do interior.",
-            image: "mclaren_steering_wheel_detail.png"
+            image: "/images/mclaren-detail.png"
           },
           {
             label: "Couro",

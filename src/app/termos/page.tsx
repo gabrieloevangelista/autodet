@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import gsap from "gsap";
 import Lenis from "@studio-freight/lenis";
+import { Icon } from '@iconify/react';
 
 export default function TermsPage() {
   useEffect(() => {
@@ -29,57 +30,66 @@ export default function TermsPage() {
       <Navigation />
       
       <section className="pt-40 pb-20 px-6 md:px-12 max-w-[1000px] mx-auto">
-        <div className="mb-16 fade-in">
-          <h1 className="font-space-grotesk text-5xl md:text-7xl font-bold tracking-tighter mb-4">
-            TERMOS DE <span className="text-[#FACC15] italic">USO</span>
+        <div className="mb-12 fade-in">
+          <a href="/" className="inline-flex items-center gap-2 text-[#FACC15] text-xs font-mono tracking-widest uppercase hover:opacity-70 transition-opacity mb-8 group">
+            <Icon icon="solar:arrow-left-linear" className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            Voltar para o Início
+          </a>
+          <h1 className="font-space-grotesk text-5xl md:text-7xl font-bold tracking-tighter mb-4 uppercase">
+            TERMOS DE <span className="text-[#FACC15] italic">SERVIÇO</span>
           </h1>
-          <p className="text-gray-400 font-mono text-sm tracking-widest uppercase">Última atualização: Abril 2026</p>
+          <p className="text-gray-400 font-mono text-[10px] tracking-widest uppercase border-l border-[#FACC15] pl-4 py-1">AUTODET STUDIO // ESTÉTICA DE ALTO PADRÃO</p>
         </div>
 
-        <div className="space-y-12 text-gray-300 leading-relaxed fade-in">
-          <section>
-            <h2 className="text-[#FACC15] font-space-grotesk text-2xl font-semibold mb-4 flex items-center gap-3">
-              <span className="w-8 h-px bg-[#FACC15]"></span> 01. ACEITAÇÃO
+        <div className="space-y-16 text-gray-300 leading-relaxed fade-in">
+          <section className="border-t border-white/5 pt-8">
+            <h2 className="text-[#FACC15] font-space-grotesk text-2xl font-semibold mb-6 flex items-center gap-3">
+              <span className="w-8 h-px bg-[#FACC15]"></span> 01. PRESTAÇÃO DE SERVIÇO
             </h2>
-            <p>
-              Ao acessar e utilizar os serviços da AUTODET, você concorda em cumprir e estar vinculado aos seguintes termos e condições. Nossos serviços são focados em estética automotiva de alto padrão e atendimento especializado a domicílio ou em nosso estúdio.
-            </p>
+            <div className="space-y-4 text-sm md:text-base font-light">
+              <p>
+                Os serviços da AUTODET são executados seguindo os mais rigorosos protocolos internacionais de detalhamento automotivo. A utilização do nosso site e a reserva de serviços implicam na aceitação integral destes termos.
+              </p>
+              <p>
+                Nossa atuação é focada em Alphaville e região metropolitana de São Paulo, oferecendo tanto atendimento em nosso estúdio quanto a modalidade "Service at Home" (atendimento a domicílio).
+              </p>
+            </div>
           </section>
 
           <section>
-            <h2 className="text-[#FACC15] font-space-grotesk text-2xl font-semibold mb-4 flex items-center gap-3">
-              <span className="w-8 h-px bg-[#FACC15]"></span> 02. SERVIÇOS
+            <h2 className="text-[#FACC15] font-space-grotesk text-2xl font-semibold mb-6 flex items-center gap-3">
+              <span className="w-8 h-px bg-[#FACC15]"></span> 02. RESERVAS E CANCELAMENTOS
             </h2>
-            <p>
-              A AUTODET reserva-se o direito de recusar serviços em veículos que apresentem condições estruturais comprometidas ou que possam oferecer risco à segurança de nossos profissionais. O escopo do serviço é definido no momento da reserva e qualquer alteração posterior deve ser acordada entre as partes.
-            </p>
+            <div className="space-y-4 text-sm md:text-base font-light">
+              <p>
+                Devido à alta complexidade e ao tempo dedicado a cada projeto, agendamentos devem ser realizados com antecedência. Cancelamentos com menos de 48 horas de aviso prévio podem estar sujeitos à retenção do valor de sinal para cobertura de logística e custos operacionais.
+              </p>
+            </div>
           </section>
 
           <section>
-            <h2 className="text-[#FACC15] font-space-grotesk text-2xl font-semibold mb-4 flex items-center gap-3">
-              <span className="w-8 h-px bg-[#FACC15]"></span> 03. AGENDAMENTO E CANCELAMENTO
+            <h2 className="text-[#FACC15] font-space-grotesk text-2xl font-semibold mb-6 flex items-center gap-3">
+              <span className="w-8 h-px bg-[#FACC15]"></span> 03. RESPONSABILIDADE SOBRE O VEÍCULO
             </h2>
-            <p>
-              Agendamentos devem ser feitos com antecedência mínima de 48 horas. Cancelamentos realizados com menos de 24 horas de antecedência podem estar sujeitos a taxas de administrativo. Valorizamos o tempo de nossos clientes e de nossa equipe técnica.
-            </p>
+            <div className="space-y-4 text-sm md:text-base font-light">
+              <p>
+                Embora utilizemos os melhores produtos e ferramentas do mercado mundial, a AUTODET não se responsabiliza por danos pré-existentes, oxidações profundas ou avarias mecânicas que não tenham relação direta com o processo estético contratado.
+              </p>
+              <p>
+                Solicitamos que todos os objetos de valor sejam removidos do veículo antes da entrega técnica.
+              </p>
+            </div>
           </section>
 
           <section>
-            <h2 className="text-[#FACC15] font-space-grotesk text-2xl font-semibold mb-4 flex items-center gap-3">
-              <span className="w-8 h-px bg-[#FACC15]"></span> 04. RESPONSABILIDADES
+            <h2 className="text-[#FACC15] font-space-grotesk text-2xl font-semibold mb-6 flex items-center gap-3">
+              <span className="w-8 h-px bg-[#FACC15]"></span> 04. GARANTIA DE PROTEÇÃO
             </h2>
-            <p>
-              O cliente é responsável por remover objetos de valor do interior do veículo antes do início do serviço. A AUTODET utiliza produtos e técnicas de ponta, porém não se responsabiliza por danos pré-existentes ou oxidações ocultas que possam vir à tona durante o processo de limpeza profunda.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-[#FACC15] font-space-grotesk text-2xl font-semibold mb-4 flex items-center gap-3">
-              <span className="w-8 h-px bg-[#FACC15]"></span> 05. PAGAMENTO
-            </h2>
-            <p>
-              Os pagamentos podem ser realizados via PIX, Cartão de Crédito ou Faturamento para empresas parceiras. O serviço só é considerado finalizado após a inspeção conjunta entre o técnico e o cliente.
-            </p>
+            <div className="space-y-4 text-sm md:text-base font-light">
+              <p>
+                Garantias relacionadas a proteções cerâmicas (Ceramic Coating) e PPF são válidas desde que as manutenções sejam realizadas conforme o cronograma estabelecido pelo AUTODET Studio.
+              </p>
+            </div>
           </section>
         </div>
       </section>
@@ -88,3 +98,4 @@ export default function TermsPage() {
     </main>
   );
 }
+

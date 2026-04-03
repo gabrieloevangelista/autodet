@@ -29,7 +29,6 @@ export default function AnimateProvider({ children }: { children: React.ReactNod
 
     // Lock body temporarily
     gsap.set("body", { opacity: 1 });
-    document.body.style.overflow = "hidden";
 
     return () => {
       gsap.ticker.remove(updateLenis);

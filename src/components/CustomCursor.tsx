@@ -15,6 +15,9 @@ export default function CustomCursor() {
     const yTo = gsap.quickTo(cursorRef.current, "y", { duration: 0.15, ease: "power3.out" });
 
     const mouseMove = (e: MouseEvent) => {
+      // Fade in on first move
+      gsap.to(cursorRef.current, { opacity: 1, duration: 0.3 });
+      
       xTo(e.clientX - 16); // 16px is half the 32px width
       yTo(e.clientY - 16);
     };
@@ -29,7 +32,7 @@ export default function CustomCursor() {
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none mix-blend-difference z-[999999] bg-white hidden md:block"
+      className="fixed top-0 left-0 w-8 h-8 rounded-full pointer-events-none mix-blend-difference z-[999999] bg-white hidden md:block opacity-0"
       style={{ 
         transform: "translate(-100px, -100px)",
       }}

@@ -33,35 +33,31 @@ export default function Intro() {
         </div>
         <div className="col-span-12 lg:col-span-8 lg:col-start-5">
           <h2 id="intro-scrub" ref={introRef} className="font-space-grotesk md:text-5xl lg:text-6xl leading-[1.1] text-3xl font-medium tracking-tight max-w-6xl">
-            <span className="inline-block will-change-[color] text-[#ffffff26]">O&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">veículo&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">não&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">é&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">apenas&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">transporte.&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">É&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">uma&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">extensão&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">da&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">Veículos&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">extraordinários&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">exigem&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">um&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">cuidado&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">à&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">altura&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">de&nbsp;</span>
             <span className="inline-block will-change-[color] text-[#ffffff26]">sua&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">identidade&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">—&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">para&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">inspirar,&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">para&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">impressionar,&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">para&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">viver.&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">Um&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">grande&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">desperdício&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">seria&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">nunca&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">vivenciar&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">engenharia.&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">Nosso&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">rigor&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">técnico&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">preserva&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">a&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">integridade&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">e&nbsp;</span>
             <span className="inline-block will-change-[color] text-[#ffffff26]">o&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">valor&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">do&nbsp;</span>
             <span className="inline-block will-change-[color] text-[#ffffff26]">seu&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">verdadeiro&nbsp;</span>
-            <span className="inline-block will-change-[color] text-[#ffffff26]">brilho.&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">ativo&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">de&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">alto&nbsp;</span>
+            <span className="inline-block will-change-[color] text-[#ffffff26]">padrão.&nbsp;</span>
           </h2>
         </div>
       </div>
