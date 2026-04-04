@@ -17,7 +17,7 @@ const steps = [
         label: "Processo",
         title: "Snow Foam",
         desc: "Pré-lavagem com espuma densa para encapsular a sujeira mais pesada.",
-        image: "/images/snow-foam-luxury.jpg"
+        image: "https://images.unsplash.com/photo-1552933075-303780517596?auto=format&fit=crop&q=80&w=600&h=400"
       },
       {
         label: "Ferramenta",
@@ -56,7 +56,7 @@ const steps = [
         label: "Análise",
         title: "Inspeção",
         desc: "Luzes Scangrip revelam a verdadeira condição da pintura.",
-        image: "/images/scangrip-inspection.png"
+        image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=600&h=400"
       }
     ]
   },
@@ -71,7 +71,7 @@ const steps = [
         label: "Maquinário",
         title: "Roto-Orbital",
         desc: "Movimento preciso que evita o aquecimento excessivo da peça.",
-        image: "/images/ferrari-polishing.png"
+        image: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&q=80&w=600&h=400"
       },
       {
         label: "Abrasivos",
@@ -98,7 +98,7 @@ const steps = [
         label: "Produto",
         title: "Ceramic Coating",
         desc: "Barreira de nano-sílica que forma um escudo de vidro sobre o verniz.",
-        image: "/images/ceramic-application.png"
+        image: "https://images.unsplash.com/photo-1574092162319-35446059d435?auto=format&fit=crop&q=80&w=600&h=400"
       },
       {
         label: "Repelência",
@@ -125,7 +125,7 @@ const steps = [
             label: "Cockpit",
             title: "Detalhamento Lógico",
             desc: "Limpeza minuciosa de cada fresta, botão e costura do interior.",
-            image: "/images/mclaren-detail.png"
+            image: "https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&q=80&w=600&h=400"
           },
           {
             label: "Couro",

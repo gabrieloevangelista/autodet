@@ -6,6 +6,17 @@ import { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Icon } from '@iconify/react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Academy | Domine a Estética de Luxo',
+  description: 'O treinamento definitivo para quem busca o topo do mercado de estética automotiva. Aprenda a metodologia AUTODET de alto ticket e rigor absoluto.',
+  openGraph: {
+    title: 'AUTODET Academy | Estética de Alto Ticket',
+    description: 'Transforme seu estúdio em um atelier de luxo. Aprenda com quem atende os clientes mais exigentes de Alphaville.',
+    images: ['https://images.unsplash.com/photo-1603584173870-7f37371ac901?auto=format&fit=crop&q=80&w=1200&h=630'],
+  },
+};
 
 export default function CoursePage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
@@ -91,7 +102,7 @@ export default function CoursePage() {
       name: "Ricardo Silva",
       role: "Dono de Studio em Alphaville",
       text: "O curso mudou minha percepção sobre o que é luxo de verdade. Em 2 meses, tripliquei o ticket médio dos meus serviços.",
-      img: "/testimonial_ricardo_final_1775260575051.png"
+      img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150"
     },
     {
       name: "Lucas Ferreira",
