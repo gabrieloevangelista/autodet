@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Icon } from '@iconify/react';
+import Image from 'next/image';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,14 @@ export default function Navigation() {
     <>
       <nav className="fixed top-0 w-full px-6 py-4 md:px-12 md:py-8 flex justify-between items-center z-[100] mix-blend-difference text-white">
         <a href="/#hero" className="flex items-center" onClick={closeMenu}>
-          <h2 className="font-space-grotesk text-xl font-semibold tracking-tighter hover:opacity-80 transition-opacity">AUTODET SELECT.</h2>
+          <Image 
+            src="/images/logo.png" 
+            alt="AUTODET SELECT" 
+            width={160} 
+            height={48} 
+            className="hover:opacity-80 transition-opacity w-auto h-8 md:h-10 object-contain"
+            priority
+          />
         </a>
         
         {/* Desktop Menu */}

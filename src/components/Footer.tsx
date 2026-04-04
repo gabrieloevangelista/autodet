@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Icon } from '@iconify/react';
+import Image from 'next/image';
 
 export default function Footer() {
   const footerRef = useRef<HTMLElement>(null);
@@ -36,10 +37,16 @@ export default function Footer() {
       <div className="max-w-[1400px] mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
           <div className="col-span-1 md:col-span-2 footer-anim">
-            <h3 className="font-space-grotesk text-3xl font-bold mb-6 tracking-tight flex items-center gap-2">
-               AUTODET SELECT<span className="text-[#FACC15]">.</span>
-               <span className="text-[10px] font-mono font-normal tracking-widest text-gray-500 uppercase border border-white/10 px-2 py-0.5 rounded-sm">Studio</span>
-            </h3>
+            <div className="flex items-center gap-3 mb-6">
+              <Image 
+                src="/images/logo.png" 
+                alt="AUTODET SELECT" 
+                width={200} 
+                height={60} 
+                className="w-auto h-10 md:h-12 object-contain"
+              />
+              <span className="text-[10px] font-mono font-normal tracking-widest text-gray-500 uppercase border border-white/10 px-2 py-0.5 rounded-sm h-fit">Studio</span>
+            </div>
             <p className="text-gray-400 max-w-sm mb-8 text-sm leading-relaxed">
               Curadoria estética automotiva para entusiastas que não aceitam o ordinário.
             </p>
