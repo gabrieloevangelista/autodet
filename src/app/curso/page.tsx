@@ -91,13 +91,13 @@ export default function CoursePage() {
       name: "Ricardo Silva",
       role: "Dono de Studio em Alphaville",
       text: "O curso mudou minha percepção sobre o que é luxo de verdade. Em 2 meses, tripliquei o ticket médio dos meus serviços.",
-      img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150"
+      img: "/images/leather-conditioning.jpg"
     },
     {
       name: "Lucas Ferreira",
       role: "Especialista Mobile",
       text: "A metodologia de atendimento a domicílio ensinada na AUTODET Academy é o que me diferencia no mercado hoje.",
-      img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150"
+      img: "/images/polishing-compound.jpg"
     }
   ];
 
@@ -124,7 +124,7 @@ export default function CoursePage() {
       <section className="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden bg-[#0a0a0a]">
         <div className="absolute inset-0 z-0 opacity-40">
           <img 
-            src="https://images.unsplash.com/photo-1552933075-303780517596?auto=format&fit=crop&q=80&w=1920&h=1080" 
+            src="/images/snow-foam-luxury.jpg" 
             alt="Academy Background" 
             className="w-full h-full object-cover grayscale"
           />

@@ -75,7 +75,7 @@ Aguardo confirmação para prosseguirmos com a consultoria técnica.`;
   };
 
   return (
-    <section id="agendamento" className="py-24 bg-[#050505] border-t border-white/5">
+    <section id="contato" className="py-24 bg-[#050505] border-t border-white/5">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">

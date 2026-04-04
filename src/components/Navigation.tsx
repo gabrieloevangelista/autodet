@@ -12,7 +12,7 @@ export default function Navigation() {
         <a href="/#journal" className="hover:text-[#FACC15] transition-colors">Processo</a>
         <a href="/#gallery" className="hover:text-[#FACC15] transition-colors">Projetos</a>
         <a href="/curso" className="hover:text-[#FACC15] transition-colors border-b border-[#FACC15]/30">Curso</a>
-        <a href="/#apply" className="hover:text-[#FACC15] transition-colors">Agendar</a>
+        <a href="/#contato" className="hover:text-[#FACC15] transition-colors">Agendar</a>
       </div>
       <button className="md:hidden group flex items-center justify-center">
         <Icon icon="solar:hamburger-menu-linear" className="w-6 h-6 group-hover:text-[#FACC15] transition-colors" style={{ strokeWidth: "1.5px" }} />

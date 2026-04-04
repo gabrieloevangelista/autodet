@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: 'AUTODET',
     images: [
       {
-        url: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200&h=630',
+        url: '/images/snow-foam-luxury.jpg',
         width: 1200,
         height: 630,
         alt: 'AUTODET Luxury Detailing',
@@ -36,15 +36,15 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AUTODET | Estética Automotiva de Luxo',
     description: 'Rigor absoluto na custódia da perfeição técnica. Atelier a domicílio.',
-    images: ['https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1200&h=630'],
+    images: ['/images/snow-foam-luxury.jpg'],
   },
   robots: {
     index: true,
     follow: true,
   },
   icons: {
-    icon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>',
-    apple: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>',
+    icon: '/favicon.svg',
+    apple: '/favicon.svg',
   }
 };
 

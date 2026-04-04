@@ -35,7 +35,7 @@ export default function ServicePackages() {
           </div>
           <div className="relative flex-1 bg-[#0A0A0A] overflow-hidden min-h-[300px] md:min-h-[400px]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://images.unsplash.com/photo-1542362567-b055002b91f4?q=80&w=2160&auto=format&fit=crop" alt="Luxury Car Detail" className="opacity-40 w-full h-full object-cover absolute inset-0 mix-blend-luminosity grayscale" />
+            <img src="/images/bg_porsche.jpg" alt="Luxury Car Detail" className="opacity-40 w-full h-full object-cover absolute inset-0 mix-blend-luminosity grayscale" />
             <div className="absolute inset-0 pointer-events-none z-10">
               <div className="absolute bg-[#FACC15] shadow-[0_0_8px_#FACC15] opacity-80" style={{ left: '70%', top: '75%', width: '10%', height: '2px' }}></div>
               <div className="absolute bg-[#FACC15] shadow-[0_0_8px_#FACC15] opacity-80" style={{ left: '70%', top: '60%', width: '2px', height: '15%' }}></div>

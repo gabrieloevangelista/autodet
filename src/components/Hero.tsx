@@ -2,10 +2,10 @@ export default function Hero() {
   return (
     <section className="h-screen relative flex items-center justify-center overflow-hidden" id="hero">
       <div className="w-full h-full absolute top-0 right-0 bottom-0 left-0">
-        <img id="hero-img" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=1920&h=1080" className="brightness-[0.3] w-full h-full object-cover" alt="Porsche Premium Car Detailing" />
+        <img id="hero-img" src="/images/bg_porsche.jpg" className="brightness-[0.3] w-full h-full object-cover" alt="Porsche Premium Car Detailing" />
         
         <div className="flex pointer-events-none bg-gradient-to-b from-transparent via-transparent to-[#050505] absolute top-0 right-0 bottom-0 left-0 items-center justify-center z-[5]">
-          <a href="#apply" className="pointer-events-auto md:w-40 md:h-40 flex items-center justify-center group cursor-pointer transition-transform duration-300 hover:scale-105 active:scale-95 bg-transparent w-32 h-32 rounded-full p-1.5">
+          <a href="#contato" className="pointer-events-auto md:w-40 md:h-40 flex items-center justify-center group cursor-pointer transition-transform duration-300 hover:scale-105 active:scale-95 bg-transparent w-32 h-32 rounded-full p-1.5">
             <div className="flex flex-col overflow-hidden transition-all duration-300 bg-transparent w-full h-full border-white/20 border rounded-full relative items-center justify-center">
               <div className="absolute inset-2 rounded-full border border-white/20 pointer-events-none transition-all duration-700 ease-out group-hover:scale-[0.85] group-hover:border-[#FACC15]/40"></div>
               

@@ -11,25 +11,25 @@ const steps = [
     label: "ETAPA 1 // LAVAGEM TÉCNICA",
     title: "LAVAGEM",
     description: "Início do ritual. Remoção de contaminantes superficiais com shampoo de pH neutro e técnica de dois baldes para evitar swirl marks.",
-    bgImage: "https://images.unsplash.com/photo-1621135802920-133df287f89c?q=80&w=3840&auto=format&fit=crop",
+    bgImage: "/images/snow-foam-luxury.jpg",
     technical: [
       {
         label: "Processo",
         title: "Snow Foam",
         desc: "Pré-lavagem com espuma densa para encapsular a sujeira mais pesada.",
-        image: "https://images.unsplash.com/photo-1552933075-303780517596?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/snow-foam-luxury.jpg"
       },
       {
         label: "Ferramenta",
         title: "Pincéis Macios",
         desc: "Detalhando emblemas e grades com cerdas naturais de javali.",
-        image: "https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/brush-detailing.jpg"
       },
       {
         label: "Acabamento",
         title: "Secagem Segura",
         desc: "Toalhas de microfibra de alta gramatura e ar filtrado.",
-        image: "https://images.unsplash.com/photo-1599256621730-535171e28e50?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/drying-luxury.jpg"
       }
     ]
   },
@@ -38,25 +38,25 @@ const steps = [
     label: "ETAPA 2 // DESCONTAMINAÇÃO",
     title: "CORREÇÃO",
     description: "Remoção de partículas ferrosas e oxidação. A superfície torna-se lisa como vidro, pronta para a fase de nivelamento de verniz.",
-    bgImage: "https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?q=80&w=3840&auto=format&fit=crop",
+    bgImage: "/images/clay-bar.jpg",
     technical: [
       {
         label: "Técnica",
         title: "Clay Bar",
         desc: "Barra de argila especial atua na remoção de overspray e poluição.",
-        image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/clay-bar.jpg"
       },
       {
         label: "Detecção",
         title: "Medição de Verniz",
         desc: "Uso de medidor ultrassônico para garantir segurança no processo.",
-        image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/paint-gauge.jpg"
       },
       {
         label: "Análise",
         title: "Inspeção",
         desc: "Luzes Scangrip revelam a verdadeira condição da pintura.",
-        image: "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/scangrip-inspection.jpg"
       }
     ]
   },
@@ -65,25 +65,25 @@ const steps = [
     label: "ETAPA 3 // POLIMENTO TÉCNICO",
     title: "POLIMENTO",
     description: "Onde a mágica acontece. Nivelamento microscópico do verniz para eliminar riscos e restaurar a profundidade máxima da cor.",
-    bgImage: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?q=80&w=3840&auto=format&fit=crop",
+    bgImage: "/images/polishing-compound.jpg",
     technical: [
       {
         label: "Maquinário",
         title: "Roto-Orbital",
         desc: "Movimento preciso que evita o aquecimento excessivo da peça.",
-        image: "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/polishing-machine.jpg"
       },
       {
         label: "Abrasivos",
         title: "Compostos Alemães",
         desc: "Micro-abrasivos que quebram durante o uso para brilho final.",
-        image: "https://images.unsplash.com/photo-1597762445831-29e2402bc06f?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/polishing-compound.jpg"
       },
       {
         label: "Uso",
         title: "Boina de Lã",
         desc: "Corte pesado para remoção de defeitos severos no verniz.",
-        image: "https://images.unsplash.com/photo-1561330324-4f0f08960249?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/wool-pad-polishing.jpg"
       }
     ]
   },
@@ -92,25 +92,25 @@ const steps = [
     label: "ETAPA 4 // PROTEÇÃO CERÂMICA",
     title: "PROTEÇÃO",
     description: "Selando a perfeição sob uma camada vítrea. Um escudo invisível garantindo repelência extrema e brilho duradouro.",
-    bgImage: "https://images.unsplash.com/photo-1542362567-b055002b91f4?q=80&w=3840&auto=format&fit=crop",
+    bgImage: "/images/hydrophobic-beading.jpg",
     technical: [
       {
         label: "Produto",
         title: "Ceramic Coating",
         desc: "Barreira de nano-sílica que forma um escudo de vidro sobre o verniz.",
-        image: "https://images.unsplash.com/photo-1574092162319-35446059d435?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/ceramic-application.jpg"
       },
       {
         label: "Repelência",
         title: "Hidrofobia",
         desc: "Tensão superficial elevada que impede a aderência de sujeira.",
-        image: "https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/hydrophobic-beading.jpg"
       },
       {
         label: "Equipamento",
         title: "Luz Infravermelha",
         desc: "Aceleração do tempo de cura para máxima dureza do coating.",
-        image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/infrared-curing.jpg"
       }
     ]
   },
@@ -119,25 +119,25 @@ const steps = [
         label: "ETAPA 5 // DETALHAMENTO INTERNO",
         title: "ENTREGA",
         description: "O sprint final. Limpeza profunda orgânica e proteção de todas as superfícies internas: couro, alcântara e fibra de carbono.",
-        bgImage: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?q=80&w=3840&auto=format&fit=crop",
+        bgImage: "/images/leather-conditioning.jpg",
         technical: [
           {
             label: "Cockpit",
             title: "Detalhamento Lógico",
             desc: "Limpeza minuciosa de cada fresta, botão e costura do interior.",
-            image: "https://images.unsplash.com/photo-1560958089-b8a1929cea89?auto=format&fit=crop&q=80&w=600&h=400"
+            image: "/images/interior-detailing.jpg"
           },
           {
             label: "Couro",
         title: "Hidratação Fosca",
         desc: "Devolvendo a textura original de fábrica sem brilho artificial.",
-        image: "https://images.unsplash.com/photo-1596752044804-068d3744618e?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/leather-conditioning.jpg"
           },
           {
             label: "Filtro",
         title: "Oxi-Sanitização",
         desc: "Eliminação de odores e bactérias através de gerador de ozônio.",
-        image: "https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&q=80&w=600&h=400"
+        image: "/images/ozone-sanitization.jpg"
           }
         ]
       }
