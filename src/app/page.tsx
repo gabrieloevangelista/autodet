@@ -6,6 +6,7 @@ import Journal from "@/components/Journal";
 import ParallaxGrid from "@/components/ParallaxGrid";
 import Specs from "@/components/Specs";
 import Philosophy from "@/components/Philosophy";
+import BookingForm from "@/components/BookingForm";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
           <ParallaxGrid />
           <Specs />
           <Philosophy />
+          <BookingForm />
           <Footer />
         </div>
       </div>

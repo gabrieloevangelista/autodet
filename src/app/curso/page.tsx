@@ -91,7 +91,7 @@ export default function CoursePage() {
       name: "Ricardo Silva",
       role: "Dono de Studio em Alphaville",
       text: "O curso mudou minha percepção sobre o que é luxo de verdade. Em 2 meses, tripliquei o ticket médio dos meus serviços.",
-      img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228ef2?auto=format&fit=crop&q=80&w=150&h=150"
+      img: "/testimonial_ricardo_final_1775260575051.png"
     },
     {
       name: "Lucas Ferreira",
@@ -223,7 +223,7 @@ export default function CoursePage() {
       {/* FAQ Section */}
       <section className="py-32 px-6">
         <div className="max-w-[800px] mx-auto">
-          <h2 className="font-space-grotesk text-4xl font-bold tracking-tighter text-center mb-16 uppercase italic">RESERVAS E DETALHES</h2>
+          <h2 className="font-space-grotesk text-4xl font-bold tracking-tighter text-center mb-16 uppercase italic text-[#FACC15]">Dúvidas frequentes.</h2>
           <div className="space-y-4">
             {faqs.map((f, i) => (
               <div key={i} className="reveal overflow-hidden rounded-2xl border border-white/5 bg-[#0a0a0a]">
@@ -254,7 +254,7 @@ export default function CoursePage() {
           <div className="bg-gradient-to-br from-[#111] to-[#010101] border border-[#FACC15]/20 p-12 md:p-20 rounded-[40px] text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-[#FACC15]/5 opacity-10 animate-pulse pointer-events-none"></div>
             
-            <h2 className="reveal font-space-grotesk text-5xl md:text-7xl font-bold tracking-tighter mb-8 uppercase leading-none">INVESTIMENTO NA <span className="text-[#FACC15]">MAESTRIA</span></h2>
+            <h2 className="reveal font-space-grotesk text-5xl md:text-7xl font-bold tracking-tighter mb-8 uppercase leading-none text-white">INVESTIMENTO NA SUA <span className="text-[#FACC15]">CARREIRA</span></h2>
             
             <div className="reveal flex flex-col justify-center items-center gap-4 mb-12">
               <div className="text-center">
