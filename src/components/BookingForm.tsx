@@ -75,7 +75,7 @@ Aguardo confirmação para prosseguirmos com a consultoria técnica.`;
   };
 
   return (
-    <section id="contato" className="py-24 bg-[#050505] border-t border-white/5">
+    <section id="contato" className="py-24 bg-[#050505] border-t border-white/5 overflow-x-hidden">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
@@ -146,7 +146,7 @@ Aguardo confirmação para prosseguirmos com a consultoria técnica.`;
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-none px-6 py-4 outline-none focus:border-[#FACC15] transition-colors text-white font-space-grotesk appearance-none"
+                    className="w-full bg-white/5 border border-white/10 rounded-none px-4 md:px-6 py-4 outline-none focus:border-[#FACC15] transition-colors text-white font-space-grotesk appearance-none"
                   >
                     {services.map((service) => (
                       <option key={service} value={service} className="bg-[#050505]">
@@ -167,7 +167,7 @@ Aguardo confirmação para prosseguirmos com a consultoria técnica.`;
                   Data da Consultoria
                 </label>
                 <div 
-                  className="relative cursor-pointer group"
+                  className="relative cursor-pointer group w-full max-w-full overflow-hidden"
                   onClick={() => {
                     const el: any = document.getElementById('date-input');
                     if (el) {
@@ -191,7 +191,7 @@ Aguardo confirmação para prosseguirmos com a consultoria técnica.`;
                     min={new Date().toISOString().split("T")[0]}
                     value={formData.date}
                     onChange={handleChange}
-                    className="w-full max-w-full bg-white/5 border border-white/10 rounded-none px-6 py-4 outline-none group-hover:border-white/30 focus:border-[#FACC15] transition-colors text-white font-space-grotesk [color-scheme:dark] cursor-pointer"
+                    className="w-full max-w-full min-w-0 bg-white/5 border border-white/10 rounded-none px-4 md:px-6 py-4 outline-none group-hover:border-white/30 focus:border-[#FACC15] transition-colors text-white font-space-grotesk [color-scheme:dark] cursor-pointer"
                   />
                   <Icon icon="mdi:calendar" className="absolute right-4 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none w-5 h-5 group-hover:text-[#FACC15] transition-colors" />
                 </div>
