@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import AnimateProvider from '@/components/AnimateProvider';
 import CustomCursor from '@/components/CustomCursor';
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', weight: ["300", "400", "500"] });
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk', weight: ["300", "400", "500", "600", "700"] });
@@ -63,6 +64,7 @@ export default function RootLayout({
         <AnimateProvider>
           {children}
         </AnimateProvider>
+        <Analytics />
       </body>
     </html>
   );
