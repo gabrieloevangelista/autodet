@@ -23,13 +23,13 @@ const steps = [
         label: "Ferramenta",
         title: "Pincéis Macios",
         desc: "Detalhando emblemas e grades com cerdas naturais de javali.",
-        image: "/images/brush-detailing.jpg"
+        image: "https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&q=80&w=600&h=400"
       },
       {
         label: "Acabamento",
         title: "Secagem Segura",
         desc: "Toalhas de microfibra de alta gramatura e ar filtrado.",
-        image: "/images/drying-luxury.jpg"
+        image: "https://images.unsplash.com/photo-1599256621730-535171e28e50?auto=format&fit=crop&q=80&w=600&h=400"
       }
     ]
   },
@@ -44,13 +44,13 @@ const steps = [
         label: "Técnica",
         title: "Clay Bar",
         desc: "Barra de argila especial atua na remoção de overspray e poluição.",
-        image: "/images/clay-bar.jpg"
+        image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=600&h=400"
       },
       {
         label: "Detecção",
         title: "Medição de Verniz",
         desc: "Uso de medidor ultrassônico para garantir segurança no processo.",
-        image: "/images/paint-gauge.jpg"
+        image: "https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&q=80&w=600&h=400"
       },
       {
         label: "Análise",
@@ -77,13 +77,13 @@ const steps = [
         label: "Abrasivos",
         title: "Compostos Alemães",
         desc: "Micro-abrasivos que quebram durante o uso para brilho final.",
-        image: "/images/polishing-compound.jpg"
+        image: "https://images.unsplash.com/photo-1597762445831-29e2402bc06f?auto=format&fit=crop&q=80&w=600&h=400"
       },
       {
         label: "Uso",
         title: "Boina de Lã",
         desc: "Corte pesado para remoção de defeitos severos no verniz.",
-        image: "/images/wool-pad-polishing.jpg"
+        image: "https://images.unsplash.com/photo-1561330324-4f0f08960249?auto=format&fit=crop&q=80&w=600&h=400"
       }
     ]
   },
@@ -104,13 +104,13 @@ const steps = [
         label: "Repelência",
         title: "Hidrofobia",
         desc: "Tensão superficial elevada que impede a aderência de sujeira.",
-        image: "/images/hydrophobic-beading.jpg"
+        image: "https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&q=80&w=600&h=400"
       },
       {
         label: "Equipamento",
         title: "Luz Infravermelha",
         desc: "Aceleração do tempo de cura para máxima dureza do coating.",
-        image: "/images/infrared-curing.jpg"
+        image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&q=80&w=600&h=400"
       }
     ]
   },
@@ -131,13 +131,13 @@ const steps = [
             label: "Couro",
         title: "Hidratação Fosca",
         desc: "Devolvendo a textura original de fábrica sem brilho artificial.",
-        image: "/images/leather-conditioning.jpg"
+        image: "https://images.unsplash.com/photo-1596752044804-068d3744618e?auto=format&fit=crop&q=80&w=600&h=400"
           },
           {
             label: "Filtro",
         title: "Oxi-Sanitização",
         desc: "Eliminação de odores e bactérias através de gerador de ozônio.",
-        image: "/images/ozone-sanitization.jpg"
+        image: "https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&q=80&w=600&h=400"
           }
         ]
       }

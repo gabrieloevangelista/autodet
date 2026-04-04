@@ -135,7 +135,7 @@ export default function CoursePage() {
       <section className="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden bg-[#0a0a0a]">
         <div className="absolute inset-0 z-0 opacity-40">
           <img 
-            src="/images/snow-foam-luxury.jpg" 
+            src="https://images.unsplash.com/photo-1552933075-303780517596?auto=format&fit=crop&q=80&w=1920&h=1080" 
             alt="Academy Background" 
             className="w-full h-full object-cover grayscale"
           />
