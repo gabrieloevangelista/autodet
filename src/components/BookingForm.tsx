@@ -169,17 +169,16 @@ Aguardo confirmação para prosseguirmos com a consultoria técnica.`;
                 <div 
                   className="relative cursor-pointer group"
                   onClick={() => {
-                    const input = document.getElementById('date-input') as HTMLInputElement | null;
-                    if (input) {
-                      const inputWithPicker = input as any;
-                      if (typeof inputWithPicker.showPicker === 'function') {
+                    const el: any = document.getElementById('date-input');
+                    if (el) {
+                      if (typeof el.showPicker === 'function') {
                         try {
-                          inputWithPicker.showPicker();
+                          el.showPicker();
                         } catch (e) {
-                          input.focus();
+                          el.focus();
                         }
                       } else {
-                        input.focus();
+                        el.focus();
                       }
                     }
                   }}
