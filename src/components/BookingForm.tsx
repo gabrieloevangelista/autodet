@@ -191,7 +191,7 @@ Aguardo confirmação para prosseguirmos com a consultoria técnica.`;
                     min={new Date().toISOString().split("T")[0]}
                     value={formData.date}
                     onChange={handleChange}
-                    className="w-full bg-white/5 border border-white/10 rounded-none px-6 py-4 outline-none group-hover:border-white/30 focus:border-[#FACC15] transition-colors text-white font-space-grotesk [color-scheme:dark] cursor-pointer"
+                    className="w-full max-w-full bg-white/5 border border-white/10 rounded-none px-6 py-4 outline-none group-hover:border-white/30 focus:border-[#FACC15] transition-colors text-white font-space-grotesk [color-scheme:dark] cursor-pointer"
                   />
                   <Icon icon="mdi:calendar" className="absolute right-4 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none w-5 h-5 group-hover:text-[#FACC15] transition-colors" />
                 </div>

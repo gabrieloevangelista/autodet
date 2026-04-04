@@ -38,9 +38,9 @@ export default function Philosophy() {
 
   return (
     <section ref={philContainerRef} id="philosophy" className="py-32 md:py-48 bg-[#050505] relative overflow-hidden flex items-center justify-center min-h-[80vh]">
-      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/philosophy-bg.jpg" className="w-full h-full object-cover" alt="Luxury Car Detail" />
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhg-ttpba6T4xWIYic8C8Bl1PQ_ZDG9ZH0Wj1bZJUcq3FdGaH00xhKIYvqcmZMxeZuFnAzaXglhyxzZKOKcKn8PxoaE24hgKjlZ61kQbvSyB9VQNtD15EFSSEm6SUdPPJQY9S6pMndudR2y/s2048/Lamborghini-Aventador-Ultimae+%252840%2529.JPG" className="w-full h-full object-cover" alt="Lamborghini Aventador Rigor Absoluto" />
       </div>
       
       <div className="max-w-[1000px] mx-auto px-6 relative z-10 text-center">
