@@ -171,9 +171,10 @@ Aguardo confirmação para prosseguirmos com a consultoria técnica.`;
                   onClick={() => {
                     const input = document.getElementById('date-input') as HTMLInputElement | null;
                     if (input) {
-                      if ('showPicker' in input) {
+                      const inputWithPicker = input as any;
+                      if (typeof inputWithPicker.showPicker === 'function') {
                         try {
-                          input.showPicker();
+                          inputWithPicker.showPicker();
                         } catch (e) {
                           input.focus();
                         }
