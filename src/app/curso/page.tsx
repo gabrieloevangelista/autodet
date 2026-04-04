@@ -96,7 +96,7 @@ export default function CoursePage() {
     {
       name: "Lucas Ferreira",
       role: "Especialista Mobile",
-      text: "A metodologia de atendimento a domicílio ensinada na AUTODET Academy é o que me diferencia no mercado hoje.",
+      text: "A metodologia de atendimento a domicílio ensinada na AUTODET SELECT Academy é o que me diferencia no mercado hoje.",
       img: "/images/polishing-compound.jpg"
     }
   ];
@@ -112,7 +112,7 @@ export default function CoursePage() {
     },
     {
       q: "Certificação e Reconhecimento?",
-      a: "Ao concluir a jornada, você receberá a Certificação de Especialista AUTODET Academy, um selo de excelência reconhecido no mercado de alto padrão."
+      a: "Ao concluir a jornada, você receberá a Certificação de Especialista AUTODET SELECT Academy, um selo de excelência reconhecido no mercado de alto padrão."
     }
   ];
 
@@ -133,7 +133,7 @@ export default function CoursePage() {
         
         <div className="relative z-10 max-w-[1200px] px-6 text-center">
           <div className="hero-text inline-block mb-6 px-4 py-1 border border-[#FACC15]/20 rounded-full bg-[#FACC15]/5">
-            <span className="text-[#FACC15] font-mono text-xs tracking-widest uppercase">AUTODET ACADEMY // MASTERCLASS</span>
+            <span className="text-[#FACC15] font-mono text-xs tracking-widest uppercase">AUTODET SELECT ACADEMY // MASTERCLASS</span>
           </div>
           <h1 className="hero-text font-space-grotesk text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.85] mb-8">
             A MAESTRIA DO <br />

@@ -37,7 +37,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-8 mb-16">
           <div className="col-span-1 md:col-span-2 footer-anim">
             <h3 className="font-space-grotesk text-3xl font-bold mb-6 tracking-tight flex items-center gap-2">
-               AUTODET<span className="text-[#FACC15]">.</span>
+               AUTODET SELECT<span className="text-[#FACC15]">.</span>
                <span className="text-[10px] font-mono font-normal tracking-widest text-gray-500 uppercase border border-white/10 px-2 py-0.5 rounded-sm">Studio</span>
             </h3>
             <p className="text-gray-400 max-w-sm mb-8 text-sm leading-relaxed">
@@ -78,7 +78,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 footer-anim">
           <p className="text-gray-600 text-xs font-mono">
-            © {new Date().getFullYear()} AUTODET STUDIO. TODOS OS DIREITOS RESERVADOS.
+            © {new Date().getFullYear()} AUTODET SELECT STUDIO. TODOS OS DIREITOS RESERVADOS.
           </p>
           <div className="flex gap-6">
             <a href="/termos" className="text-gray-600 hover:text-gray-300 text-xs font-mono">TERMOS</a>

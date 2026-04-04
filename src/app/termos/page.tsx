@@ -38,7 +38,7 @@ export default function TermsPage() {
           <h1 className="font-space-grotesk text-5xl md:text-7xl font-bold tracking-tighter mb-4 uppercase">
             TERMOS DE <span className="text-[#FACC15] italic">SERVIÇO</span>
           </h1>
-          <p className="text-gray-400 font-mono text-[10px] tracking-widest uppercase border-l border-[#FACC15] pl-4 py-1">AUTODET STUDIO // ESTÉTICA DE ALTO PADRÃO</p>
+          <p className="text-gray-400 font-mono text-[10px] tracking-widest uppercase border-l border-[#FACC15] pl-4 py-1">AUTODET SELECT STUDIO // ESTÉTICA DE ALTO PADRÃO</p>
         </div>
 
         <div className="space-y-16 text-gray-300 leading-relaxed fade-in">
@@ -48,7 +48,7 @@ export default function TermsPage() {
             </h2>
             <div className="space-y-4 text-sm md:text-base font-light">
               <p>
-                Os serviços da AUTODET são executados seguindo os mais rigorosos protocolos internacionais de detalhamento automotivo. A utilização do nosso site e a reserva de serviços implicam na aceitação integral destes termos.
+                Os serviços da AUTODET SELECT são executados seguindo os mais rigorosos protocolos internacionais de detalhamento automotivo. A utilização do nosso site e a reserva de serviços implicam na aceitação integral destes termos.
               </p>
               <p>
                 Nossa atuação é focada em Alphaville e região metropolitana de São Paulo, oferecendo tanto atendimento em nosso estúdio quanto a modalidade "Service at Home" (atendimento a domicílio).
@@ -73,7 +73,7 @@ export default function TermsPage() {
             </h2>
             <div className="space-y-4 text-sm md:text-base font-light">
               <p>
-                Embora utilizemos os melhores produtos e ferramentas do mercado mundial, a AUTODET não se responsabiliza por danos pré-existentes, oxidações profundas ou avarias mecânicas que não tenham relação direta com o processo estético contratado.
+                Embora utilizemos os melhores produtos e ferramentas do mercado mundial, a AUTODET SELECT não se responsabiliza por danos pré-existentes, oxidações profundas ou avarias mecânicas que não tenham relação direta com o processo estético contratado.
               </p>
               <p>
                 Solicitamos que todos os objetos de valor sejam removidos do veículo antes da entrega técnica.
@@ -87,7 +87,7 @@ export default function TermsPage() {
             </h2>
             <div className="space-y-4 text-sm md:text-base font-light">
               <p>
-                Garantias relacionadas a proteções cerâmicas (Ceramic Coating) e PPF são válidas desde que as manutenções sejam realizadas conforme o cronograma estabelecido pelo AUTODET Studio.
+                Garantias relacionadas a proteções cerâmicas (Ceramic Coating) e PPF são válidas desde que as manutenções sejam realizadas conforme o cronograma estabelecido pelo AUTODET SELECT Studio.
               </p>
             </div>
           </section>

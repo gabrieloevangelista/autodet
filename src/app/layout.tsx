@@ -10,32 +10,32 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space
 
 export const metadata: Metadata = {
   title: {
-    default: 'AUTODET | Estética Automotiva de Luxo em Alphaville',
-    template: '%s | AUTODET'
+    default: 'AUTODET SELECT | Estética Automotiva de Luxo em Alphaville',
+    template: '%s | AUTODET SELECT'
   },
   description: 'Rigor absoluto e curadoria técnica na custódia do seu patrimônio. Estética automotiva de alto padrão com atendimento exclusivo a domicílio em Alphaville, SP.',
   keywords: ['estética automotiva', 'alphaville', 'detalhamento automotivo', 'luxury detailing', 'vitrificação', 'autodet', 'higienização interna'],
-  authors: [{ name: 'AUTODET Academy' }],
-  creator: 'AUTODET',
+  authors: [{ name: 'AUTODET SELECT Academy' }],
+  creator: 'AUTODET SELECT',
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
     url: 'https://autodet.com.br',
-    title: 'AUTODET | Estética Automotiva de Luxo',
+    title: 'AUTODET SELECT | Estética Automotiva de Luxo',
     description: 'Rigor absoluto na custódia da perfeição técnica do seu veículo. Experiência de atelier a domicílio.',
-    siteName: 'AUTODET',
+    siteName: 'AUTODET SELECT',
     images: [
       {
         url: '/images/snow-foam-luxury.jpg',
         width: 1200,
         height: 630,
-        alt: 'AUTODET Luxury Detailing',
+        alt: 'AUTODET SELECT Luxury Detailing',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AUTODET | Estética Automotiva de Luxo',
+    title: 'AUTODET SELECT | Estética Automotiva de Luxo',
     description: 'Rigor absoluto na custódia da perfeição técnica. Atelier a domicílio.',
     images: ['/images/snow-foam-luxury.jpg'],
   },

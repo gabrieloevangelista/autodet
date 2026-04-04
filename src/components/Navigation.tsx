@@ -13,7 +13,7 @@ export default function Navigation() {
     <>
       <nav className="fixed top-0 w-full px-6 py-4 md:px-12 md:py-8 flex justify-between items-center z-[100] mix-blend-difference text-white">
         <a href="/#hero" className="flex items-center" onClick={closeMenu}>
-          <h2 className="font-space-grotesk text-xl font-semibold tracking-tighter hover:opacity-80 transition-opacity">AUTODET.</h2>
+          <h2 className="font-space-grotesk text-xl font-semibold tracking-tighter hover:opacity-80 transition-opacity">AUTODET SELECT.</h2>
         </a>
         
         {/* Desktop Menu */}

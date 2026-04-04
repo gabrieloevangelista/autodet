@@ -39,7 +39,7 @@ export default function BookingForm() {
       const day = selectedDate.getUTCDay(); // 0 is Sunday
       
       if (day === 0) {
-        alert("A AUTODET opera de Segunda a Sábado. Por favor, selecione um dia útil.");
+        alert("A AUTODET SELECT opera de Segunda a Sábado. Por favor, selecione um dia útil.");
         setFormData((prev) => ({ ...prev, [name]: "" }));
         return;
       }
@@ -56,7 +56,7 @@ export default function BookingForm() {
       return;
     }
 
-    const message = `Olá, gostaria de agendar um serviço conceitual na AUTODET.
+    const message = `Olá, gostaria de agendar um serviço conceitual na AUTODET SELECT.
     
 Dados do Agendamento:
 Nome: ${formData.name}
@@ -236,7 +236,7 @@ Aguardo confirmação para prosseguirmos com a consultoria técnica.`;
             </div>
             
             <p className="text-center text-white/20 text-[10px] uppercase tracking-widest">
-              Ao clicar, você será redirecionado para o atendimento oficial da AUTODET via WhatsApp.
+              Ao clicar, você será redirecionado para o atendimento oficial da AUTODET SELECT via WhatsApp.
             </p>
           </form>
         </div>

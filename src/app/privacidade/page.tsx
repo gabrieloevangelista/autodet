@@ -38,7 +38,7 @@ export default function PrivacyPage() {
           <h1 className="font-space-grotesk text-5xl md:text-7xl font-bold tracking-tighter mb-4 uppercase">
             POLÍTICA DE <span className="text-[#FACC15] italic">PRIVACIDADE</span>
           </h1>
-          <p className="text-gray-400 font-mono text-[10px] tracking-widest uppercase border-l border-[#FACC15] pl-4 py-1">SEGURANÇA E CONFIDENCIALIDADE // AUTODET</p>
+          <p className="text-gray-400 font-mono text-[10px] tracking-widest uppercase border-l border-[#FACC15] pl-4 py-1">SEGURANÇA E CONFIDENCIALIDADE // AUTODET SELECT</p>
         </div>
 
         <div className="space-y-16 text-gray-300 leading-relaxed fade-in">
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
             </h2>
             <div className="space-y-4 text-sm md:text-base font-light">
               <p>
-                A AUTODET preza pela privacidade total de seus clientes, muitos dos quais possuem coleções privadas e veículos de alto valor. O tratamento de seus dados pessoais é realizado com o máximo rigor técnico e jurídico.
+                A AUTODET SELECT preza pela privacidade total de seus clientes, muitos dos quais possuem coleções privadas e veículos de alto valor. O tratamento de seus dados pessoais é realizado com o máximo rigor técnico e jurídico.
               </p>
             </div>
           </section>
