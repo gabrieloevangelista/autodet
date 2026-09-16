@@ -4,6 +4,7 @@ import { useRef, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import CardImage from "@/components/CardImage";
 
 const steps = [
   {
@@ -174,11 +175,11 @@ export default function Journal() {
           {steps.map((step) => (
             <div key={step.id} className="relative w-1/5 h-full flex flex-col md:flex-row items-center justify-evenly md:justify-between px-6 md:px-20 bg-[#050505] pt-24 pb-8 md:py-0 overflow-hidden shrink-0">
               <div className="absolute inset-0 z-0 pointer-events-none">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img 
+                <CardImage 
                   src={step.bgImage} 
                   className="w-full h-full object-cover opacity-30 grayscale mix-blend-luminosity" 
-                  alt={step.title} 
+                  alt={step.title}
+                  title={step.title}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/80 to-transparent"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent md:to-[#050505]/30"></div>
@@ -209,11 +210,12 @@ export default function Journal() {
                       className={`relative overflow-hidden rounded-sm border border-white/10 bg-[#0A0A0A] group/card hover:border-white/30 transition-colors duration-500 ${i === 0 ? 'col-span-1 row-span-2' : 'col-span-1 row-span-1'}`}
                     >
                       <div className="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img 
+                        <CardImage 
                           src={tech.image} 
-                          className="w-full h-full object-cover opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal transition-all duration-700" 
-                          alt={tech.title} 
+                          className="opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal" 
+                          alt={tech.title}
+                          title={tech.title}
+                          category={tech.label}
                         />
                       </div>
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/40 to-transparent"></div>

@@ -1,6 +1,9 @@
+import CardImage from "@/components/CardImage";
+
 export default function ServicePackages() {
   return (
     <section id="route" className="z-20 border-white/5 border-t py-20 md:py-32 relative bg-[#050505]">
+
       <div className="md:px-20 flex max-w-[1600px] mx-auto mb-12 px-6 items-end justify-between">
         <div>
           <div className="flex items-center gap-2 mb-4">
@@ -34,8 +37,12 @@ export default function ServicePackages() {
             </div>
           </div>
           <div className="relative flex-1 bg-[#0A0A0A] overflow-hidden min-h-[300px] md:min-h-[400px]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/bg_porsche.jpg" alt="Luxury Car Detail" className="opacity-40 w-full h-full object-cover absolute inset-0 mix-blend-luminosity grayscale" />
+            <CardImage 
+              src="/images/bg_porsche.jpg" 
+              alt="Luxury Car Detail" 
+              title="Especificações de Detalhamento"
+              className="opacity-40 object-cover absolute inset-0 mix-blend-luminosity grayscale" 
+            />
             <div className="absolute inset-0 pointer-events-none z-10">
               <div className="absolute bg-[#FACC15] shadow-[0_0_8px_#FACC15] opacity-80" style={{ left: '70%', top: '75%', width: '10%', height: '2px' }}></div>
               <div className="absolute bg-[#FACC15] shadow-[0_0_8px_#FACC15] opacity-80" style={{ left: '70%', top: '60%', width: '2px', height: '15%' }}></div>

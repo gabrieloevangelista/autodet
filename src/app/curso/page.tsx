@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Icon } from '@iconify/react';
+import CardImage from "@/components/CardImage";
 
 export default function CoursePage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
@@ -123,12 +124,13 @@ export default function CoursePage() {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden bg-[#0a0a0a]">
         <div className="absolute inset-0 z-0 opacity-40">
-          <img 
-            src="/images/snow-foam-luxury.jpg" 
-            alt="Academy Background" 
+          <CardImage 
+            src="/images/og-academy.jpg" 
+            alt="Academy Masterclass Background" 
+            title="AUTODET SELECT Academy Masterclass"
             className="w-full h-full object-cover grayscale"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-transparent to-[#050505] pointer-events-none"></div>
         </div>
         
         <div className="relative z-10 max-w-[1200px] px-6 text-center">
@@ -208,7 +210,14 @@ export default function CoursePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {testimonials.map((t, i) => (
               <div key={i} className="reveal p-8 rounded-3xl bg-[#080808] border border-white/5 flex flex-col md:flex-row gap-6 items-start">
-                <img src={t.img} alt={t.name} className="w-16 h-16 rounded-full object-cover border-2 border-[#FACC15]/20" />
+                <div className="w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-[#FACC15]/20">
+                  <CardImage 
+                    src={t.img} 
+                    alt={t.name} 
+                    title={t.name}
+                    className="w-full h-full object-cover" 
+                  />
+                </div>
                 <div>
                   <p className="text-gray-300 mb-4 italic leading-relaxed font-light">"{t.text}"</p>
                   <h5 className="font-bold text-[#FACC15]">{t.name}</h5>
