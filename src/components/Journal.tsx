@@ -207,18 +207,21 @@ export default function Journal() {
                   {step.technical.map((tech, i) => (
                     <div 
                       key={i} 
-                      className={`relative overflow-hidden rounded-sm border border-white/10 bg-[#0A0A0A] group/card hover:border-white/30 transition-colors duration-500 ${i === 0 ? 'col-span-1 row-span-2' : 'col-span-1 row-span-1'}`}
+                      className={`relative overflow-hidden rounded-sm border border-white/10 group/card hover:border-white/30 transition-colors duration-500 ${i === 0 ? 'col-span-1 row-span-2' : 'col-span-1 row-span-1'}`}
+                      style={{ backgroundImage: `url(${tech.image})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#0A0A0A' }}
                     >
+                      {/* Image layer */}
                       <div className="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
-                        <CardImage 
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img 
                           src={tech.image} 
-                          className="opacity-60 group-hover/card:opacity-95 transition-all duration-700" 
                           alt={tech.title}
-                          title={tech.title}
-                          category={tech.label}
+                          className="w-full h-full object-cover opacity-60 group-hover/card:opacity-95 transition-opacity duration-700"
                         />
                       </div>
+                      {/* Gradient overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/95 via-[#0A0A0A]/40 to-transparent"></div>
+                      {/* Text content */}
                       <div className="relative z-10 p-3 md:p-4 flex flex-col h-full justify-end skew-x-3 pointer-events-none">
                         <span className="text-[10px] md:text-xs uppercase tracking-widest text-[#FACC15] font-medium mb-1 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">
                           {tech.label}
