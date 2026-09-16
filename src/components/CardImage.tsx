@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Icon } from "@iconify/react";
 
 interface CardImageProps {
@@ -22,30 +22,37 @@ export default function CardImage({
 }: CardImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    setIsLoaded(false);
+    setHasError(false);
+
+    if (imgRef.current && imgRef.current.complete) {
+      if (imgRef.current.naturalWidth > 0) {
+        setIsLoaded(true);
+      }
+    }
+  }, [src]);
 
   return (
     <div className={`relative w-full h-full overflow-hidden bg-[#0a0a0a] ${containerClassName}`}>
       {/* Skeleton Loading State */}
       {!isLoaded && !hasError && (
-        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-[#0d0d0d] overflow-hidden">
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-[#0d0d0d] overflow-hidden pointer-events-none">
           {/* Shimmer line */}
           <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-[#FACC15]/10 to-transparent pointer-events-none" />
           
-          {/* Subtle pulse icon/badge */}
+          {/* Subtle pulse icon */}
           <div className="flex flex-col items-center gap-2 relative z-10 opacity-60">
             <div className="w-8 h-8 rounded-full border border-[#FACC15]/30 flex items-center justify-center bg-[#FACC15]/5 animate-pulse shadow-[0_0_12px_rgba(250,204,21,0.15)]">
               <Icon icon="solar:sparkler-linear" className="w-4 h-4 text-[#FACC15]" />
             </div>
-            {title && (
-              <span className="text-[9px] font-mono tracking-widest uppercase text-gray-500">
-                Carregando
-              </span>
-            )}
           </div>
         </div>
       )}
 
-      {/* Fallback View if Image fails */}
+      {/* Fallback View if Image really fails */}
       {hasError ? (
         <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center bg-gradient-to-br from-[#141414] via-[#0b0b0b] to-[#050505] border border-white/5">
           <div className="w-10 h-10 rounded-full border border-[#FACC15]/40 flex items-center justify-center mb-2 bg-[#FACC15]/10 shadow-[0_0_15px_rgba(250,204,21,0.2)]">
@@ -67,12 +74,13 @@ export default function CardImage({
         /* The Actual Image */
         /* eslint-disable-next-line @next/next/no-img-element */
         <img
+          ref={imgRef}
           src={src}
           alt={alt}
           onLoad={() => setIsLoaded(true)}
           onError={() => setHasError(true)}
-          className={`w-full h-full object-cover transition-all duration-700 ${
-            isLoaded ? "opacity-100" : "opacity-0"
+          className={`w-full h-full object-cover transition-opacity duration-700 ${
+            isLoaded ? "" : "opacity-0"
           } ${className}`}
         />
       )}

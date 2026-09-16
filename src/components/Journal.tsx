@@ -212,14 +212,14 @@ export default function Journal() {
                       <div className="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
                         <CardImage 
                           src={tech.image} 
-                          className="opacity-40 mix-blend-luminosity group-hover/card:opacity-70 group-hover/card:mix-blend-normal" 
+                          className="opacity-60 group-hover/card:opacity-95 transition-all duration-700" 
                           alt={tech.title}
                           title={tech.title}
                           category={tech.label}
                         />
                       </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/90 via-[#0A0A0A]/40 to-transparent"></div>
-                      <div className="relative z-10 p-3 md:p-4 flex flex-col h-full justify-end skew-x-3">
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/95 via-[#0A0A0A]/40 to-transparent"></div>
+                      <div className="relative z-10 p-3 md:p-4 flex flex-col h-full justify-end skew-x-3 pointer-events-none">
                         <span className="text-[10px] md:text-xs uppercase tracking-widest text-[#FACC15] font-medium mb-1 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">
                           {tech.label}
                         </span>
