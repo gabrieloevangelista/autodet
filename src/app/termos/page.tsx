@@ -4,18 +4,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { useEffect } from "react";
 import gsap from "gsap";
-import Lenis from "@studio-freight/lenis";
 import { Icon } from '@iconify/react';
 
 export default function TermsPage() {
   useEffect(() => {
-    const lenis = new Lenis();
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
     gsap.from(".fade-in", {
       y: 20,
       opacity: 0,

@@ -14,7 +14,9 @@ export default function AnimateProvider({ children }: { children: React.ReactNod
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
 
-    lenis.stop(); // Stop scroll during preload
+    if (document.getElementById("loader")) {
+      lenis.stop(); // Stop scroll during preload only when loader is present
+    }
 
     lenis.on('scroll', ScrollTrigger.update);
     

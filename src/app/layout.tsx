@@ -56,9 +56,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
-      <head>
-        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" defer></script>
-      </head>
       <body className="bg-[#050505] text-[#FFFFFF] font-space-grotesk m-0 overflow-x-hidden selection:bg-[#FACC15] selection:text-white text-sm sm:text-base leading-relaxed">
         <CustomCursor />
         <AnimateProvider>

@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import Preloader from "@/components/Preloader";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
@@ -6,8 +7,11 @@ import Journal from "@/components/Journal";
 import ParallaxGrid from "@/components/ParallaxGrid";
 import Specs from "@/components/Specs";
 import Philosophy from "@/components/Philosophy";
-import BookingForm from "@/components/BookingForm";
 import Footer from "@/components/Footer";
+
+const BookingForm = dynamic(() => import("@/components/BookingForm"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (

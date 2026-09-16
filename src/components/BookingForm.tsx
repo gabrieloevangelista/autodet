@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Icon } from "@iconify/react";
 
 const services = [
@@ -30,6 +30,11 @@ export default function BookingForm() {
   });
   
   const [selectedTime, setSelectedTime] = useState("");
+  const [minDate, setMinDate] = useState("");
+
+  useEffect(() => {
+    setMinDate(new Date().toISOString().split("T")[0]);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -188,9 +193,10 @@ Aguardo confirmação para prosseguirmos com a consultoria técnica.`;
                     id="date-input"
                     type="date"
                     name="date"
-                    min={new Date().toISOString().split("T")[0]}
+                    min={minDate || undefined}
                     value={formData.date}
                     onChange={handleChange}
+                    suppressHydrationWarning
                     className="w-full max-w-full min-w-0 bg-white/5 border border-white/10 rounded-none px-4 md:px-6 py-4 outline-none group-hover:border-white/30 focus:border-[#FACC15] transition-colors text-white font-space-grotesk [color-scheme:dark] cursor-pointer [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:inset-0 [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full [&::-webkit-calendar-picker-indicator]:cursor-pointer"
                   />
                   <Icon icon="mdi:calendar" className="absolute right-4 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none w-5 h-5 group-hover:text-[#FACC15] transition-colors" />
