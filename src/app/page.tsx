@@ -3,6 +3,7 @@ import Preloader from "@/components/Preloader";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
+import ServicePackages from "@/components/ServicePackages";
 import Journal from "@/components/Journal";
 import ParallaxGrid from "@/components/ParallaxGrid";
 import Specs from "@/components/Specs";
@@ -25,6 +26,7 @@ export default function Home() {
         <div id="smooth-content">
           <Hero />
           <Intro />
+          <ServicePackages />
           <Journal />
           <ParallaxGrid />
           <Specs />
