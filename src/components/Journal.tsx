@@ -57,7 +57,7 @@ const steps = [
         label: "Análise",
         title: "Inspeção",
         desc: "Luzes Scangrip revelam a verdadeira condição da pintura.",
-        image: "/images/scangrip-inspection.jpg"
+        image: "/images/scangrip-inspection.jpg?v=2"
       }
     ]
   },
@@ -72,7 +72,7 @@ const steps = [
         label: "Maquinário",
         title: "Roto-Orbital",
         desc: "Movimento preciso que evita o aquecimento excessivo da peça.",
-        image: "/images/polishing-machine.jpg"
+        image: "/images/polishing-machine.jpg?v=2"
       },
       {
         label: "Abrasivos",
@@ -99,7 +99,7 @@ const steps = [
         label: "Produto",
         title: "Ceramic Coating",
         desc: "Barreira de nano-sílica que forma um escudo de vidro sobre o verniz.",
-        image: "/images/ceramic-application.jpg"
+        image: "/images/ceramic-application.jpg?v=2"
       },
       {
         label: "Repelência",
@@ -126,7 +126,7 @@ const steps = [
             label: "Cockpit",
             title: "Detalhamento Lógico",
             desc: "Limpeza minuciosa de cada fresta, botão e costura do interior.",
-            image: "/images/interior-detailing.jpg"
+            image: "/images/interior-detailing.jpg?v=2"
           },
           {
             label: "Couro",
@@ -207,20 +207,19 @@ export default function Journal() {
                   {step.technical.map((tech, i) => (
                     <div 
                       key={i} 
-                      className={`relative overflow-hidden rounded-sm border border-white/10 group/card hover:border-white/30 transition-colors duration-500 ${i === 0 ? 'col-span-1 row-span-2' : 'col-span-1 row-span-1'}`}
-                      style={{ backgroundImage: `url(${tech.image})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#0A0A0A' }}
+                      className={`relative overflow-hidden rounded-sm border border-white/10 bg-[#0A0A0A] group/card hover:border-white/30 transition-colors duration-500 ${i === 0 ? 'col-span-1 row-span-2' : 'col-span-1 row-span-1'}`}
                     >
-                      {/* Image layer */}
-                      <div className="absolute inset-[-10%] skew-x-3 scale-[1.15] group-hover/card:scale-[1.2] transition-transform duration-700 ease-out">
+                      {/* Only 1 image layer with smooth zoom on hover */}
+                      <div className="absolute inset-0 overflow-hidden">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img 
                           src={tech.image} 
                           alt={tech.title}
-                          className="w-full h-full object-cover opacity-60 group-hover/card:opacity-95 transition-opacity duration-700"
+                          className="w-full h-full object-cover opacity-75 group-hover/card:opacity-100 group-hover/card:scale-110 transition-all duration-700 ease-out"
                         />
                       </div>
-                      {/* Gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A]/95 via-[#0A0A0A]/40 to-transparent"></div>
+                      {/* Gradient overlay for readability */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/40 to-transparent pointer-events-none"></div>
                       {/* Text content */}
                       <div className="relative z-10 p-3 md:p-4 flex flex-col h-full justify-end skew-x-3 pointer-events-none">
                         <span className="text-[10px] md:text-xs uppercase tracking-widest text-[#FACC15] font-medium mb-1 transform translate-y-2 opacity-80 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300">
@@ -229,11 +228,11 @@ export default function Journal() {
                         <h4 className="text-white text-xs sm:text-sm md:text-base font-medium mb-1 tracking-tight transform translate-y-2 group-hover/card:translate-y-0 transition-all duration-300 delay-75">
                           {tech.title}
                         </h4>
-                        <p className={`text-[10px] md:text-xs text-gray-400 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 ${i === 0 ? 'line-clamp-3' : 'line-clamp-2'}`}>
+                        <p className={`text-[10px] md:text-xs text-gray-300 leading-tight transform translate-y-4 opacity-0 group-hover/card:translate-y-0 group-hover/card:opacity-100 transition-all duration-300 delay-100 ${i === 0 ? 'line-clamp-3' : 'line-clamp-2'}`}>
                           {tech.desc}
                         </p>
                       </div>
-                      <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#FACC15] group-hover/card:w-full transition-all duration-700 ease-out"></div>
+                      <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#FACC15] group-hover/card:w-full transition-all duration-700 ease-out pointer-events-none"></div>
                     </div>
                   ))}
                 </div>
