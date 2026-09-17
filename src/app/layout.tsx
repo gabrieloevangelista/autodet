@@ -10,11 +10,11 @@ const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space
 
 export const metadata: Metadata = {
   title: {
-    default: 'AUTODET SELECT | Estética Automotiva de Luxo em Alphaville',
+    default: 'AUTODET SELECT | Estética Automotiva de Luxo em Ponte Nova, MG',
     template: '%s | AUTODET SELECT'
   },
-  description: 'Rigor absoluto e curadoria técnica na custódia do seu patrimônio. Estética automotiva de alto padrão com atendimento exclusivo a domicílio em Alphaville, SP.',
-  keywords: ['estética automotiva', 'alphaville', 'detalhamento automotivo', 'luxury detailing', 'vitrificação', 'autodet', 'higienização interna'],
+  description: 'Rigor absoluto e curadoria técnica na custódia do seu patrimônio. Estética automotiva de alto padrão com atendimento exclusivo a domicílio em Ponte Nova, MG.',
+  keywords: ['estética automotiva', 'ponte nova', 'minas gerais', 'detalhamento automotivo', 'luxury detailing', 'vitrificação', 'autodet', 'higienização interna'],
   authors: [{ name: 'AUTODET SELECT Academy' }],
   creator: 'AUTODET SELECT',
   openGraph: {

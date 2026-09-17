@@ -75,7 +75,7 @@ export default function Footer() {
           <div className="col-span-1 footer-anim">
             <h4 className="font-mono text-xs tracking-widest text-[#FACC15] mb-6">CONTATO</h4>
             <ul className="space-y-4">
-              <li className="text-gray-400 text-sm">Alphaville, SP</li>
+              <li className="text-gray-400 text-sm">Ponte Nova, MG</li>
               <li className="text-[#FACC15] text-sm font-medium">Atendimento a Domicílio</li>
               <li className="text-gray-400 text-sm">contato@autodet.com.br</li>
               <li className="text-gray-400 text-sm">+55 11 99999-9999</li>

@@ -43,7 +43,7 @@ export default function TermsPage() {
                 Os serviços da AUTODET SELECT são executados seguindo os mais rigorosos protocolos internacionais de detalhamento automotivo. A utilização do nosso site e a reserva de serviços implicam na aceitação integral destes termos.
               </p>
               <p>
-                Nossa atuação é focada em Alphaville e região metropolitana de São Paulo, oferecendo tanto atendimento em nosso estúdio quanto a modalidade "Service at Home" (atendimento a domicílio).
+                Nossa atuação é focada em Ponte Nova, MG e região da Zona da Mata mineira, oferecendo tanto atendimento em nosso estúdio quanto a modalidade "Service at Home" (atendimento a domicílio).
               </p>
             </div>
           </section>

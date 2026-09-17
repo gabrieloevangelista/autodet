@@ -92,7 +92,7 @@ Aguardo confirmação para prosseguirmos com a consultoria técnica.`;
             </h3>
             <p className="text-white/60 max-w-xl mx-auto">
               Selecione o horário que melhor se adapta à sua rotina. 
-              Confirmaremos a disponibilidade da nossa equipe técnica em Alphaville em instantes.
+              Confirmaremos a disponibilidade da nossa equipe técnica em Ponte Nova, MG em instantes.
             </p>
           </div>
 

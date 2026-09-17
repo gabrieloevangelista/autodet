@@ -6,45 +6,27 @@ import { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Icon } from '@iconify/react';
-import CardImage from "@/components/CardImage";
 
 export default function CoursePage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
   useEffect(() => {
-    // Reveal the page immediately as we are not using the Preloader here
     gsap.set("body", { opacity: 1, overflow: "auto" });
     
-    // Ensure Lenis starts if it was stopped by the provider
     const lenis = (window as any).lenis;
     if (lenis) {
       lenis.start();
     }
 
-    // Initial Hero Animations
     const tl = gsap.timeline();
     tl.fromTo(".hero-text", 
-      { 
-        y: 40, 
-        opacity: 0 
-      }, 
-      { 
-        y: 0, 
-        opacity: 1, 
-        duration: 1, 
-        stagger: 0.12,
-        ease: "power3.out",
-        clearProps: "all"
-      }
+      { y: 30, opacity: 0 }, 
+      { y: 0, opacity: 1, duration: 0.9, stagger: 0.1, ease: "power3.out", clearProps: "all" }
     );
 
-    // Reveal animations on scroll
     gsap.utils.toArray(".reveal").forEach((el: any) => {
       gsap.fromTo(el, 
-        { 
-          y: 35, 
-          opacity: 0 
-        }, 
+        { y: 30, opacity: 0 }, 
         {
           scrollTrigger: {
             trigger: el,
@@ -52,37 +34,36 @@ export default function CoursePage() {
           },
           y: 0,
           opacity: 1,
-          duration: 0.9,
+          duration: 0.8,
           ease: "power2.out"
         }
       );
     });
-
   }, []);
 
   const stats = [
     {
       number: "40h",
       label: "Carga Horária",
-      desc: "Imersão técnica com 90% de prática em veículos reais",
+      desc: "Imersão com foco prático em carros reais",
       icon: "solar:clock-circle-linear"
     },
     {
-      number: "04",
-      label: "Alunos por Turma",
-      desc: "Atenção individualizada e bancada exclusiva",
+      number: "08",
+      label: "Vagas por Turma",
+      desc: "Turma reduzida com bancada individual para cada aluno",
       icon: "solar:users-group-rounded-linear"
     },
     {
       number: "100%",
-      label: "Insumos Importados",
-      desc: "Compostos alemães, cerâmicas e máquinas de ponta",
-      icon: "solar:medal-ribbon-star-linear"
+      label: "Material Incluso",
+      desc: "Politrizes, compostos e vitrificadores fornecidos no curso",
+      icon: "solar:box-minimalistic-linear"
     },
     {
-      number: "VIP",
-      label: "Certificação Oficial",
-      desc: "Selo de Especialista AUTODET SELECT reconhecido",
+      number: "Oficial",
+      label: "Certificado Técnico",
+      desc: "Certificação profissional emitida pela AUTODET SELECT",
       icon: "solar:diploma-verified-linear"
     }
   ];
@@ -90,98 +71,105 @@ export default function CoursePage() {
   const modules = [
     {
       id: "01",
-      title: "CURADORIA DE SUPERFÍCIES",
-      subtitle: "Diagnóstico, Micragem & Preparação",
-      desc: "A ciência da descontaminação mecânica e química profunda, medição ultrassônica de verniz e análise óptica sob iluminação Scangrip.",
-      icon: "solar:washing-machine-minimalistic-linear",
+      title: "Diagnóstico & Preparação",
+      subtitle: "Inspeção Óptica & Descontaminação",
+      desc: "Avaliação milimétrica da espessura de verniz com medidor digital, descontaminação química (ferrosa) e mecânica com clay bar sem causar riscos.",
+      icon: "solar:magnifer-linear",
       image: "/images/scangrip-inspection.jpg",
-      topics: ["Inspeção de micragem ponto a ponto", "Descontaminação com Clay Bar e descontaminante ferroso", "Identificação de repinturas e defeitos críticos"]
+      topics: [
+        "Uso de luminárias técnicas Scangrip para mapear imperfeições",
+        "Medição de micragem em painéis originais e repintados",
+        "Descontaminação química e técnica com clay bar",
+        "Mascaramento técnico de borrachas, plásticos e frisos"
+      ]
     },
     {
       id: "02",
-      title: "RESTAURAÇÃO ÓPTICA",
-      subtitle: "Polimento Técnico & Nivelamento",
-      desc: "Técnicas avançadas de corte, refino e lustro com politrizes roto-orbitais e compostos de microabrasivos alemães de última geração.",
-      icon: "solar:layers-minimalistic-linear",
+      title: "Polimento Técnico",
+      subtitle: "Corte, Refino & Lustro",
+      desc: "Domínio das politrizes roto-orbitais e rotativas. Escolha correta de boinas de lã e espuma com compostos microabrasivos alemães para eliminar riscos.",
+      icon: "solar:refresh-circle-linear",
       image: "/images/polishing-machine.jpg",
-      topics: ["Setup e empunhadura de roto-orbitais", "Combinações exatas de boinas e compostos", "Eliminação de hologramas para acabamento espelhado"]
+      topics: [
+        "Setup, velocidade e pressão correta em máquinas roto-orbitais",
+        "Técnica de corte sem deixar hologramas ou marcas de boina",
+        "Etapas de refino e lustro para acabamento espelhado",
+        "Controle térmico da chapa para evitar danos ao verniz"
+      ]
     },
     {
       id: "03",
-      title: "ENGENHARIA DE PROTEÇÃO",
-      subtitle: "Ceramic Coating 9H & Cura",
-      desc: "Blindagem molecular com vitrificadores cerâmicos 9H, aplicação de selantes de alta densidade e cura controlada com lâmpadas de infravermelho.",
+      title: "Vitrificação Cerâmica",
+      subtitle: "Aplicação de Ceramic Coating 9H",
+      desc: "Aplicação precisa de vitrificador cerâmico. Controle de tempo de cura, técnica de nivelamento com microfibra e aceleração com lâmpada infravermelha.",
       icon: "solar:shield-check-linear",
       image: "/images/ceramic-application.jpg",
-      topics: ["Aplicação e nivelamento de Ceramic Coating", "Controle de tempo de flash e ancoragem", "Repelência hidrofóbica e proteção contra raios UV"]
+      topics: [
+        "Desengraxe absoluto com álcool isopropílico / prep",
+        "Técnica cruzada de aplicação em blocos de suede",
+        "Identificação do tempo de flash e remoção no ponto exato",
+        "Cura controlada com infravermelho e teste de hidrofobia"
+      ]
     },
     {
       id: "04",
-      title: "BRANDING & ALTO TICKET",
-      subtitle: "Posicionamento no Mercado 1%",
-      desc: "A arte de precificar serviços de 4 dígitos, montar propostas irrecusáveis e encantar clientes de alto poder aquisitivo no ecossistema Alphaville.",
-      icon: "solar:hand-money-linear",
-      image: "/images/philosophy-lamborghini.jpg",
-      topics: ["Estruturação de pacotes de R$ 2.000 a R$ 8.000", "Protocolo de atendimento exclusivo a domicílio", "Fidelização e esteira de manutenção contínua"]
+      title: "Detalhamento Interno",
+      subtitle: "Higienização & Tratamento de Couro",
+      desc: "Limpeza minuciosa de cada fresta da cabine com pincéis de cerdas naturais, extratora profissional e hidratação com acabamento fosco original de fábrica.",
+      icon: "solar:armchair-linear",
+      image: "/images/interior-detailing.jpg",
+      topics: [
+        "Limpeza profunda e hidratação de bancos de couro fosco",
+        "Higienização de alcântara, carpetes e cintos de segurança",
+        "Detalhamento de difusores, botões e telas sensíveis",
+        "Oxi-sanitização com gerador de ozônio para eliminar odores"
+      ]
     }
   ];
 
-  const methodologySteps = [
+  const practicalFeatures = [
     {
-      step: "01",
-      title: "Diagnóstico Clínico",
-      desc: "Aprenda a analisar a lataria com medidores de espessura e luzes técnicas antes de tocar na pintura."
+      title: "Bancada Individual",
+      desc: "Cada aluno tem sua própria bancada com politriz, kit de boinas, compostos e painéis de teste para treinar à vontade.",
+      icon: "solar:tuning-square-2-linear"
     },
     {
-      step: "02",
-      title: "Bancada Prática Individual",
-      desc: "Cada aluno tem sua própria máquina, boinas e painéis para treinar até alcançar a perfeição."
+      title: "Carros Reais na Prática",
+      desc: "Você não treina apenas em peças soltas: as etapas finais são executadas em carros reais do início ao fim.",
+      icon: "solar:wheel-linear"
     },
     {
-      step: "03",
-      title: "Aplicação em Supercarro Real",
-      desc: "Viva a experiência real de executar o detalhamento completo em veículos de alta performance."
+      title: "Suporte Técnico Direto",
+      desc: "Grupo de WhatsApp pós-curso direto com o instrutor para tirar dúvidas práticas durante seus primeiros atendimentos.",
+      icon: "solar:chat-round-dots-linear"
     },
     {
-      step: "04",
-      title: "Mentoria de Negócios & Vendas",
-      desc: "Saia do curso sabendo exatamente como prospectar, cobrar e entregar valor de alto padrão."
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Ricardo Silva",
-      role: "Proprietário de Studio • Alphaville, SP",
-      text: "O curso transformou a minha visão sobre o que é serviço de luxo. Em menos de 60 dias, tripliquei o ticket médio dos meus pacotes de polimento e vitrificação.",
-      img: "/images/leather-conditioning.jpg",
-      highlight: "+300% de Faturamento"
-    },
-    {
-      name: "Lucas Ferreira",
-      role: "Especialista Mobile • São Paulo, SP",
-      text: "A metodologia de atendimento a domicílio e o rigor técnico que aprendi na Academy me colocaram em um nível onde não disputo preço com ninguém.",
-      img: "/images/polishing-compound.jpg",
-      highlight: "Clientes Recorrentes"
+      title: "Apostila & Tabela de Produtos",
+      desc: "Material de apoio com passo a passo das etapas, tempos de cura, diluições recomendadas e fornecedores de confiança.",
+      icon: "solar:document-text-linear"
     }
   ];
 
   const faqs = [
     {
-      q: "Onde acontece a Masterclass presencial?",
-      a: "O treinamento é 100% presencial e acontece em nosso atelier conceito em Alphaville, SP. O estúdio conta com iluminação de inspeção Scangrip, ambiente climatizado e toda a infraestrutura de ponta."
+      q: "Quantas pessoas participam por turma?",
+      a: "As turmas são estritamente limitadas a no máximo 8 alunos. Isso garante que cada participante tenha sua própria bancada e que o instrutor consiga acompanhar a pega de máquina e a técnica de cada um de perto."
     },
     {
-      q: "Preciso ter experiência prévia para participar?",
-      a: "Não é obrigatório. O curso foi desenhado tanto para profissionais que desejam migrar para o mercado de luxo quanto para iniciantes comprometidos com a excelência técnica desde o primeiro dia."
+      q: "Preciso ter experiência prévia para fazer o curso?",
+      a: "Não. O curso começa nos fundamentos (diagnóstico, lavagem técnica e mascaramento) e progride até as técnicas avançadas de polimento e vitrificação. É ideal tanto para iniciantes quanto para quem já atua e quer elevar seu nível de entrega."
     },
     {
-      q: "Todos os materiais e equipamentos estão inclusos?",
-      a: "Sim. Máquinas roto-orbitais, boinas, compostos alemães, vitrificadores cerâmicos e equipamentos de proteção individual são fornecidos integralmente durante todo o treinamento."
+      q: "Preciso levar minhas próprias máquinas ou materiais?",
+      a: "Não precisa trazer nada. Nós fornecemos 100% dos equipamentos (politrizes roto-orbitais e rotativas, lâmpadas Scangrip, boinas, compostos de polimento, vitrificadores cerâmicos e EPIs) durante toda a duração do curso."
     },
     {
-      q: "Como funciona a certificação e o suporte pós-curso?",
-      a: "Ao concluir o treinamento, você recebe o Certificado Oficial AUTODET SELECT Academy e acesso exclusivo ao nosso grupo VIP para tirar dúvidas técnicas diretamente com o instrutor."
+      q: "Onde o curso é realizado?",
+      a: "O curso acontece no nosso espaço técnico em Ponte Nova, MG, com estrutura completa de iluminação de detalhamento, climatização e bancadas individuais."
+    },
+    {
+      q: "Como funciona a emissão do certificado?",
+      a: "Ao final do treinamento prático de 40 horas, você recebe o Certificado de Conclusão oficial da AUTODET SELECT, atestando suas competências em polimento técnico e proteção cerâmica."
     }
   ];
 
@@ -190,71 +178,56 @@ export default function CoursePage() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center pt-28 pb-20 overflow-hidden bg-[#0a0a0a]">
-        {/* Background Image with smooth CardImage loader */}
-        <div className="absolute inset-0 z-0 opacity-35">
-          <CardImage 
-            src="/images/og-academy.jpg" 
-            alt="Academy Masterclass Background" 
-            title="AUTODET SELECT Academy Masterclass"
-            className="w-full h-full object-cover grayscale"
+      <section className="relative min-h-[80vh] flex items-center justify-center pt-28 pb-16 overflow-hidden bg-[#050505]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0 opacity-20">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img 
+            src="/images/bg_porsche.jpg" 
+            alt="Detalhamento Técnico de Alto Padrão" 
+            className="w-full h-full object-cover grayscale brightness-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#050505]/60 to-[#050505] pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#050505] via-[#050505]/70 to-[#050505] pointer-events-none"></div>
         </div>
         
-        <div className="relative z-10 max-w-[1100px] px-6 text-center flex flex-col items-center justify-center mx-auto">
-          {/* Badge */}
-          <div className="hero-text inline-flex items-center gap-2 mb-6 px-4 py-1.5 border border-[#FACC15]/30 rounded-full bg-[#FACC15]/10 backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-[#FACC15] shadow-[0_0_8px_#FACC15] animate-pulse"></span>
-            <span className="text-[#FACC15] font-mono text-xs tracking-widest uppercase">
-              AUTODET SELECT ACADEMY // MASTERCLASS
-            </span>
-          </div>
-
-          {/* Refined Headline */}
-          <h1 className="hero-text font-space-grotesk text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 max-w-4xl">
-            A MAESTRIA DO <br className="hidden sm:inline" />
-            <span className="text-[#FACC15] italic">DETALHAMENTO AUTOMOTIVO</span>
+        <div className="relative z-10 max-w-[1000px] px-6 text-center flex flex-col items-center justify-center mx-auto">
+          {/* Headline */}
+          <h1 className="hero-text font-space-grotesk text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1] mb-6 max-w-4xl text-white uppercase">
+            Curso Prático de <br className="hidden sm:inline" />
+            <span className="text-[#FACC15]">Estética Automotiva & Polimento</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="hero-text text-gray-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-            Domine a ciência do polimento técnico, vitrificação e posicionamento de alto ticket para atender os clientes mais exigentes do mercado de luxo.
+          <p className="hero-text text-gray-300 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+            Aprenda na prática todas as etapas do detalhamento automotivo: diagnóstico com micragem, polimento técnico sem hologramas e aplicação profissional de vitrificadores cerâmicos 9H.
           </p>
 
-          {/* Centered CTA Section */}
+          {/* CTA Section */}
           <div className="hero-text flex flex-col items-center justify-center gap-4 w-full">
             <a 
               href="#offer" 
-              className="group relative inline-flex items-center justify-center bg-[#FACC15] text-black px-12 py-5 rounded-full font-bold text-sm tracking-widest uppercase transition-all duration-300 hover:scale-105 hover:bg-white shadow-[0_0_30px_rgba(250,204,21,0.25)]"
+              className="inline-flex items-center justify-center gap-4 bg-[#FACC15] text-black font-bold text-sm sm:text-base tracking-[0.2em] uppercase px-12 sm:px-16 py-5 sm:py-5.5 hover:bg-white transition-colors duration-300 rounded-none"
             >
-              <span className="relative z-10 flex items-center gap-3">
-                Quero ser um especialista
-                <Icon icon="solar:arrow-right-linear" className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </span>
+              <span>Garantir Minha Vaga</span>
+              <Icon icon="solar:arrow-right-linear" className="w-5 h-5" />
             </a>
-            <div className="flex items-center justify-center gap-2 text-xs font-mono text-gray-400 uppercase tracking-widest">
-              <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-              <span>Presencial em Alphaville • Vagas Limitadas (Máx. 4 Alunos)</span>
+            <div className="flex items-center justify-center gap-2 text-xs font-mono text-gray-400 uppercase tracking-wider">
+              <span className="w-1.5 h-1.5 bg-emerald-400"></span>
+              <span>40h de Imersão • Ponte Nova, MG • Máximo 8 Alunos</span>
             </div>
           </div>
-        </div>
-
-        {/* Floating scroll indicator */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
-           <Icon icon="solar:arrow-down-linear" className="w-5 h-5 text-[#FACC15]" />
         </div>
       </section>
 
       {/* Key Stats Bar */}
-      <section className="py-16 border-y border-white/5 bg-[#020202] relative z-10">
-        <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className="py-14 border-y border-white/5 bg-[#080808] relative z-10">
+        <div className="max-w-[1300px] mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((st, i) => (
-            <div key={i} className="reveal p-6 rounded-2xl bg-[#080808] border border-white/5 flex flex-col items-center text-center group hover:border-[#FACC15]/30 transition-colors">
-              <div className="w-12 h-12 rounded-xl bg-[#FACC15]/10 flex items-center justify-center text-[#FACC15] mb-4 group-hover:scale-110 transition-transform">
-                <Icon icon={st.icon} className="w-6 h-6" />
+            <div key={i} className="reveal p-6 rounded-none bg-[#0a0a0a] border border-white/10 flex flex-col items-center text-center group hover:border-[#FACC15]/40 transition-colors">
+              <div className="w-10 h-10 rounded-none border border-[#FACC15]/20 bg-[#FACC15]/5 flex items-center justify-center text-[#FACC15] mb-3">
+                <Icon icon={st.icon} className="w-5 h-5" />
               </div>
-              <h3 className="text-[#FACC15] text-3xl md:text-4xl font-space-grotesk font-bold mb-1">{st.number}</h3>
+              <h3 className="text-[#FACC15] text-3xl font-bold mb-1">{st.number}</h3>
               <p className="text-white font-medium text-sm mb-1">{st.label}</p>
               <p className="text-gray-400 text-xs leading-relaxed font-light">{st.desc}</p>
             </div>
@@ -262,18 +235,18 @@ export default function CoursePage() {
         </div>
       </section>
 
-      {/* Modules Section with Background Images on Every Card */}
-      <section className="py-28 px-6 relative z-10">
+      {/* Modules Section */}
+      <section className="py-24 px-6 relative z-10">
         <div className="max-w-[1300px] mx-auto">
-          <div className="mb-16 text-center max-w-3xl mx-auto">
-            <span className="text-[#FACC15] font-mono text-xs tracking-widest uppercase mb-3 block">
-              Grade Curricular Completa
+          <div className="mb-16 text-center max-w-2xl mx-auto">
+            <span className="text-[#FACC15] font-mono text-xs tracking-widest uppercase mb-2 block">
+              Conteúdo Programático
             </span>
             <h2 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-4 uppercase">
-              OS PILARES DA <span className="text-[#FACC15] italic">MAESTRIA</span>
+              O Que Você Vai <span className="text-[#FACC15]">Aprender</span>
             </h2>
             <p className="text-gray-400 text-sm md:text-base font-light leading-relaxed">
-              Estrutura pedagógica desenhada para transformar você em uma autoridade em estética automotiva de alto padrão.
+              Etapas detalhadas e organizadas de forma lógica para você executar com segurança e precisão.
             </p>
           </div>
 
@@ -281,35 +254,23 @@ export default function CoursePage() {
             {modules.map((m, i) => (
               <div 
                 key={i} 
-                className="reveal group relative p-8 md:p-10 bg-[#0a0a0a] border border-white/10 hover:border-[#FACC15]/50 transition-all duration-500 rounded-2xl overflow-hidden flex flex-col justify-between min-h-[380px] shadow-2xl"
+                className="reveal p-8 md:p-9 bg-[#0a0a0a] border border-white/10 flex flex-col justify-between min-h-[340px]"
               >
-                {/* Background Image of the Service with Smooth Overlay */}
-                <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-                  <CardImage 
-                    src={m.image} 
-                    alt={m.title} 
-                    title={m.title}
-                    category={`MÓDULO ${m.id}`}
-                    className="w-full h-full object-cover opacity-20 group-hover:opacity-35 group-hover:scale-105 transition-all duration-700 grayscale mix-blend-luminosity group-hover:mix-blend-normal"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/90 to-[#0a0a0a]/70"></div>
-                </div>
-
-                {/* Card Top Info */}
-                <div className="relative z-10">
-                  <div className="flex items-center justify-between mb-6">
-                    <span className="text-xs font-mono font-bold text-[#FACC15] border border-[#FACC15]/40 px-3 py-1 rounded bg-[#FACC15]/10">
+                {/* Card Header */}
+                <div>
+                  <div className="flex items-center justify-between mb-5">
+                    <span className="text-xs font-mono font-bold text-[#FACC15] border border-[#FACC15]/40 px-2.5 py-1 rounded-none bg-[#FACC15]/10">
                       MÓDULO {m.id}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-[#FACC15]/10 border border-[#FACC15]/20 flex items-center justify-center text-[#FACC15] group-hover:bg-[#FACC15] group-hover:text-black transition-all">
-                      <Icon icon={m.icon} className="w-5 h-5" />
+                    <div className="w-8 h-8 rounded-none border border-[#FACC15]/20 bg-[#FACC15]/5 flex items-center justify-center text-[#FACC15]">
+                      <Icon icon={m.icon} className="w-4 h-4" />
                     </div>
                   </div>
 
-                  <h3 className="text-xl md:text-2xl font-bold tracking-tight text-white group-hover:text-[#FACC15] transition-colors uppercase mb-1">
+                  <h3 className="text-xl md:text-2xl font-bold tracking-tight text-white mb-1 uppercase">
                     {m.title}
                   </h3>
-                  <p className="text-xs font-mono text-gray-400 uppercase tracking-widest mb-4">
+                  <p className="text-xs font-mono text-[#FACC15]/80 uppercase tracking-wider mb-3">
                     {m.subtitle}
                   </p>
                   <p className="text-gray-300 text-sm leading-relaxed font-light mb-6">
@@ -317,85 +278,43 @@ export default function CoursePage() {
                   </p>
                 </div>
 
-                {/* Card Syllabus Highlights */}
-                <div className="relative z-10 pt-4 border-t border-white/10">
-                  <ul className="space-y-2">
+                {/* Topics list */}
+                <div className="pt-4 border-t border-white/10">
+                  <ul className="space-y-2.5">
                     {m.topics.map((t, idx) => (
-                      <li key={idx} className="flex items-center gap-2.5 text-xs text-gray-400">
-                        <Icon icon="solar:check-circle-bold" className="w-4 h-4 text-[#FACC15] shrink-0" />
+                      <li key={idx} className="flex items-start gap-2.5 text-xs text-gray-400">
+                        <Icon icon="solar:check-circle-bold" className="w-3.5 h-3.5 text-[#FACC15] shrink-0 mt-0.5" />
                         <span>{t}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-
-                {/* Animated Gold Bottom Border */}
-                <div className="absolute bottom-0 left-0 w-0 h-[3px] bg-[#FACC15] group-hover:w-full transition-all duration-700 ease-out"></div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Methodology Section */}
-      <section className="py-24 bg-[#030303] border-y border-white/5 relative z-10">
+      {/* Practical Features / Differential */}
+      <section className="py-20 bg-[#080808] border-y border-white/5 relative z-10">
         <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-center mb-16 max-w-2xl mx-auto">
+          <div className="text-center mb-14 max-w-2xl mx-auto">
             <span className="text-[#FACC15] font-mono text-xs tracking-widest uppercase mb-2 block">
-              Metodologia de Ensino
+              Estrutura do Treinamento
             </span>
-            <h2 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight uppercase">
-              COMO FUNCIONA A <span className="text-[#FACC15]">IMERSÃO</span>
+            <h2 className="font-space-grotesk text-3xl sm:text-4xl font-bold tracking-tight uppercase">
+              Diferenciais da <span className="text-[#FACC15]">Nossa Turma</span>
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {methodologySteps.map((st, i) => (
-              <div key={i} className="reveal p-6 rounded-2xl bg-[#080808] border border-white/5 relative">
-                <span className="text-3xl font-bold font-mono text-[#FACC15]/40 mb-4 block">
-                  {st.step}
-                </span>
-                <h4 className="text-lg font-bold text-white mb-2">{st.title}</h4>
-                <p className="text-gray-400 text-xs leading-relaxed font-light">{st.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-28 bg-[#020202] relative z-10">
-        <div className="max-w-[1200px] mx-auto px-6">
-          <div className="text-center mb-16">
-             <span className="text-[#FACC15] font-mono text-xs tracking-widest uppercase mb-2 block">
-               Prova Social & Depoimentos
-             </span>
-             <h2 className="font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight uppercase">
-               QUEM VIVEU A <span className="text-[#FACC15]">TRANSFORMAÇÃO</span>
-             </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {testimonials.map((t, i) => (
-              <div key={i} className="reveal p-8 rounded-3xl bg-[#080808] border border-white/10 flex flex-col md:flex-row gap-6 items-start hover:border-[#FACC15]/30 transition-colors">
-                <div className="w-20 h-20 rounded-2xl overflow-hidden shrink-0 border-2 border-[#FACC15]/30">
-                  <CardImage 
-                    src={t.img} 
-                    alt={t.name} 
-                    title={t.name}
-                    className="w-full h-full object-cover" 
-                  />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {practicalFeatures.map((f, i) => (
+              <div key={i} className="reveal p-6 rounded-none bg-[#0a0a0a] border border-white/10 flex flex-col justify-start hover:border-[#FACC15]/30 transition-colors">
+                <div className="w-9 h-9 rounded-none border border-[#FACC15]/20 bg-[#FACC15]/5 flex items-center justify-center text-[#FACC15] mb-4">
+                  <Icon icon={f.icon} className="w-4 h-4" />
                 </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-1 text-[#FACC15] mb-3">
-                    {[...Array(5)].map((_, s) => (
-                      <Icon key={s} icon="solar:star-bold" className="w-4 h-4" />
-                    ))}
-                    <span className="text-xs font-mono text-gray-500 ml-2">{t.highlight}</span>
-                  </div>
-                  <p className="text-gray-300 text-sm mb-4 italic leading-relaxed font-light">"{t.text}"</p>
-                  <h4 className="font-bold text-[#FACC15] text-base">{t.name}</h4>
-                  <p className="text-gray-500 text-xs uppercase font-mono tracking-widest mt-0.5">{t.role}</p>
-                </div>
+                <h4 className="text-base font-bold text-white mb-2">{f.title}</h4>
+                <p className="text-gray-400 text-xs leading-relaxed font-light">{f.desc}</p>
               </div>
             ))}
           </div>
@@ -404,33 +323,33 @@ export default function CoursePage() {
 
       {/* FAQ Section */}
       <section className="py-24 px-6 relative z-10">
-        <div className="max-w-[850px] mx-auto">
-          <div className="text-center mb-14">
+        <div className="max-w-[800px] mx-auto">
+          <div className="text-center mb-12">
             <span className="text-[#FACC15] font-mono text-xs tracking-widest uppercase mb-2 block">
-              Tire Suas Dúvidas
+              Dúvidas Frequentes
             </span>
-            <h2 className="font-space-grotesk text-3xl sm:text-4xl font-bold tracking-tight uppercase italic text-[#FACC15]">
-              PERGUNTAS FREQUENTES
+            <h2 className="font-space-grotesk text-3xl sm:text-4xl font-bold tracking-tight uppercase">
+              Perguntas <span className="text-[#FACC15]">Frequentes</span>
             </h2>
           </div>
 
-          <div className="space-y-4">
+          <div className="space-y-3">
             {faqs.map((f, i) => (
-              <div key={i} className="reveal overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a0a]">
+              <div key={i} className="reveal overflow-hidden rounded-none border border-white/10 bg-[#0a0a0a]">
                 <button 
                   onClick={() => setActiveFaq(activeFaq === i ? null : i)}
-                  className="w-full p-6 text-left flex justify-between items-center group transition-colors"
+                  className="w-full p-5 text-left flex justify-between items-center group transition-colors"
                 >
-                  <span className={`font-medium text-sm md:text-base transition-colors ${activeFaq === i ? 'text-[#FACC15]' : 'text-white group-hover:text-gray-200'}`}>
+                  <span className={`font-medium text-sm sm:text-base transition-colors ${activeFaq === i ? 'text-[#FACC15]' : 'text-white group-hover:text-gray-200'}`}>
                     {f.q}
                   </span>
                   <Icon 
                     icon={activeFaq === i ? "solar:minus-circle-linear" : "solar:plus-circle-linear"} 
-                    className={`w-6 h-6 shrink-0 transition-all duration-300 ${activeFaq === i ? 'text-[#FACC15] rotate-180' : 'text-gray-500'}`} 
+                    className={`w-5 h-5 shrink-0 transition-transform duration-300 ${activeFaq === i ? 'text-[#FACC15] rotate-180' : 'text-gray-500'}`} 
                   />
                 </button>
-                <div className={`transition-all duration-500 ease-in-out ${activeFaq === i ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
-                  <div className="p-6 pt-0 text-gray-400 text-sm leading-relaxed border-t border-white/5 mt-2 bg-white/[0.02] font-light">
+                <div className={`transition-all duration-300 ease-in-out ${activeFaq === i ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'}`}>
+                  <div className="p-5 pt-0 text-gray-400 text-xs sm:text-sm leading-relaxed border-t border-white/5 mt-1 font-light">
                     {f.a}
                   </div>
                 </div>
@@ -440,78 +359,80 @@ export default function CoursePage() {
         </div>
       </section>
 
-      {/* Offer Section with WhatsApp Integration */}
-      <section id="offer" className="py-28 px-6 pb-40 relative z-10">
-        <div className="max-w-[1000px] mx-auto">
-          <div className="bg-gradient-to-br from-[#111111] via-[#090909] to-[#020202] border border-[#FACC15]/30 p-10 md:p-16 rounded-[36px] text-center relative overflow-hidden shadow-[0_0_80px_rgba(250,204,21,0.1)]">
-            <div className="absolute inset-0 bg-[#FACC15]/5 opacity-10 animate-pulse pointer-events-none"></div>
+      {/* Offer Section */}
+      <section id="offer" className="py-20 px-6 pb-36 relative z-10">
+        <div className="max-w-[900px] mx-auto">
+          <div className="bg-[#0a0a0a] border border-white/10 p-8 sm:p-14 rounded-none text-center relative">
             
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-1 border border-[#FACC15]/30 rounded-full bg-[#FACC15]/10">
-              <span className="text-[#FACC15] font-mono text-[11px] tracking-widest uppercase">
-                Próxima Turma Exclusiva • Inscrições Abertas
+            <div className="inline-flex items-center gap-2 mb-6 px-3 py-1 border border-[#FACC15]/30 bg-[#FACC15]/5 rounded-none">
+              <span className="w-1.5 h-1.5 bg-[#FACC15]"></span>
+              <span className="text-[#FACC15] font-mono text-xs tracking-widest uppercase">
+                TURMA EXCLUSIVA • APENAS 8 VAGAS
               </span>
             </div>
 
-            <h2 className="reveal font-space-grotesk text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-6 uppercase text-white">
-              INVESTIMENTO NA SUA <span className="text-[#FACC15]">CARREIRA</span>
+            <h2 className="reveal font-space-grotesk text-2xl sm:text-4xl font-bold tracking-tight mb-4 uppercase text-white">
+              GARANTA SUA VAGA NA <span className="text-[#FACC15]">PRÓXIMA TURMA</span>
             </h2>
             
-            <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto mb-10 font-light">
-              Garanta sua bancada individual e tenha acesso a 40 horas de treinamento prático de alta performance em Alphaville.
+            <p className="text-gray-400 text-xs sm:text-sm max-w-lg mx-auto mb-8 font-light">
+              Bancada individual, 100% dos insumos inclusos e 40 horas de prática direta em Ponte Nova, MG.
             </p>
 
-            <div className="reveal flex flex-col justify-center items-center gap-4 mb-10">
+            <div className="reveal flex flex-col justify-center items-center gap-3 mb-8">
               <div className="text-center">
-                <p className="text-[#FACC15] font-mono text-xs tracking-widest uppercase mb-1">Parcelamento Facilitado</p>
+                <p className="text-[#FACC15] font-mono text-xs tracking-widest uppercase mb-1">Parcelamento no Cartão</p>
                 <div className="flex items-baseline justify-center gap-2">
-                   <span className="text-lg md:text-xl font-light text-[#FACC15]">12x de</span>
-                   <h3 className="text-4xl md:text-6xl font-bold tracking-tight text-[#FACC15]">R$ 130</h3>
+                   <span className="text-base font-light text-[#FACC15]">12x de</span>
+                   <h3 className="text-4xl sm:text-5xl font-bold tracking-tight text-[#FACC15]">R$ 130</h3>
                 </div>
               </div>
               
               <div className="text-center">
                 <p className="text-white/40 font-mono text-[10px] tracking-widest uppercase mb-1">Ou pagamento à vista</p>
-                <h4 className="text-2xl md:text-3xl font-bold tracking-tight text-white">
+                <h4 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
                   R$ 1.497 <span className="text-xs font-light text-white/50 lowercase">via Pix</span>
                 </h4>
               </div>
             </div>
 
-            {/* Checklist of what is included */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-lg mx-auto text-left mb-10 text-xs text-gray-300">
+            {/* Checklist */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md mx-auto text-left mb-8 text-xs text-gray-300">
               <div className="flex items-center gap-2">
                 <Icon icon="solar:check-circle-bold" className="text-[#FACC15] w-4 h-4 shrink-0" />
-                <span>Bancada prática individual</span>
+                <span>Bancada de trabalho individual</span>
               </div>
               <div className="flex items-center gap-2">
                 <Icon icon="solar:check-circle-bold" className="text-[#FACC15] w-4 h-4 shrink-0" />
-                <span>Insumos alemães inclusos</span>
+                <span>Politrizes e insumos 100% inclusos</span>
               </div>
               <div className="flex items-center gap-2">
                 <Icon icon="solar:check-circle-bold" className="text-[#FACC15] w-4 h-4 shrink-0" />
-                <span>Certificado Oficial AUTODET</span>
+                <span>Certificado oficial AUTODET SELECT</span>
               </div>
               <div className="flex items-center gap-2">
                 <Icon icon="solar:check-circle-bold" className="text-[#FACC15] w-4 h-4 shrink-0" />
-                <span>Suporte contínuo no grupo VIP</span>
+                <span>Suporte técnico pós-curso no WhatsApp</span>
               </div>
             </div>
 
-            <div className="reveal flex flex-col items-center gap-6">
+            <div className="reveal flex flex-col items-center gap-5">
               <a 
-                href="https://wa.me/553171640031?text=Ol%C3%A1%2C%20gostaria%20de%20garantir%20minha%20vaga%20na%20Masterclass%20AUTODET%20SELECT%20Academy."
+                href="https://wa.me/553171640031?text=Ol%C3%A1%2C%20gostaria%20de%20garantir%20minha%20vaga%20no%20Curso%20Presencial%20da%20AUTODET%20SELECT."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#FACC15] text-black px-16 py-5 rounded-full font-bold text-base tracking-widest uppercase hover:scale-105 hover:bg-white transition-all duration-300 shadow-[0_0_40px_rgba(250,204,21,0.3)]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-4 bg-[#FACC15] text-black font-bold text-sm sm:text-base tracking-[0.2em] uppercase px-12 sm:px-16 py-5 sm:py-5.5 hover:bg-white transition-colors duration-300 rounded-none"
               >
-                <span>Garantir minha vaga</span>
-                <Icon icon="mdi:whatsapp" className="w-6 h-6" />
+                <span>Garantir Minha Vaga</span>
+                <Icon icon="mdi:whatsapp" className="w-5 h-5" />
               </a>
               
-              <div className="flex items-center justify-center gap-4 text-gray-500 grayscale opacity-60">
-                <Icon icon="logos:visa" className="w-10 h-6 h-auto" />
-                <Icon icon="logos:mastercard" className="w-10 h-6 h-auto" />
-                <Icon icon="logos:pix" className="w-10 h-6 h-auto" />
+              <div className="flex items-center justify-center gap-4 text-gray-500 opacity-50 text-xs font-mono">
+                <span>Visa</span>
+                <span>•</span>
+                <span>Mastercard</span>
+                <span>•</span>
+                <span>Pix</span>
               </div>
             </div>
           </div>

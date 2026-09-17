@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Academy | Domine a Estética de Luxo',
-  description: 'O treinamento definitivo para quem busca o topo do mercado de estética automotiva. Aprenda a metodologia AUTODET SELECT de alto ticket e rigor absoluto.',
+  title: 'Curso Prático de Estética Automotiva | AUTODET SELECT',
+  description: 'Treinamento presencial de detalhamento automotivo e polimento técnico em Ponte Nova, MG. Turma exclusiva de até 8 alunos com bancada individual.',
   icons: {
     icon: '/favicon.svg',
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: 'AUTODET SELECT Academy | Estética de Alto Ticket',
-    description: 'Transforme seu estúdio em um atelier de luxo. Aprenda com quem atende os clientes mais exigentes de Alphaville.',
+    title: 'Curso Prático de Estética Automotiva | AUTODET SELECT',
+    description: 'Aprenda na prática polimento técnico, vitrificação cerâmica 9H e higienização interna. Apenas 8 vagas por turma.',
     images: ['/images/og-academy.jpg'],
   },
 };
