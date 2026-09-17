@@ -26,7 +26,7 @@ export default function Home() {
         <div id="smooth-content">
           <Hero />
           <Intro />
-          <ServicePackages />
+          {/* <ServicePackages /> */}
           <Journal />
           <ParallaxGrid />
           <Specs />

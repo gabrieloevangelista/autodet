@@ -37,11 +37,17 @@ export default function Navigation() {
           onClick={toggleMenu}
           className="md:hidden group flex items-center justify-center relative z-[110]"
           aria-label="Abrir Menu"
+          type="button"
         >
-          <Icon 
-            icon={isOpen ? "solar:close-circle-linear" : "solar:hamburger-menu-linear"} 
-            className={`w-7 h-7 transition-all duration-300 ${isOpen ? 'text-[#FACC15]' : 'group-hover:text-[#FACC15]'}`} 
-          />
+          {isOpen ? (
+            <svg className="w-7 h-7 text-[#FACC15] transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="w-7 h-7 text-white group-hover:text-[#FACC15] transition-all duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
         </button>
       </nav>
 

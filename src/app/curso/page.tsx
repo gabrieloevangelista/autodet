@@ -174,7 +174,7 @@ export default function CoursePage() {
   ];
 
   return (
-    <main className="bg-[#050505] min-h-screen text-white font-space-grotesk selection:bg-[#FACC15] selection:text-black">
+    <main className="bg-[#050505] min-h-screen text-white font-space-grotesk selection:bg-[#FACC15] selection:text-black" suppressHydrationWarning>
       <Navigation />
 
       {/* Hero Section */}
@@ -333,21 +333,35 @@ export default function CoursePage() {
             </h2>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-3" suppressHydrationWarning>
             {faqs.map((f, i) => (
-              <div key={i} className="reveal overflow-hidden rounded-none border border-white/10 bg-[#0a0a0a]">
-                <button 
+              <div 
+                key={i} 
+                className="reveal overflow-hidden rounded-none border border-white/10 bg-[#0a0a0a]"
+                suppressHydrationWarning
+              >
+                <div 
+                  role="button"
+                  tabIndex={0}
                   onClick={() => setActiveFaq(activeFaq === i ? null : i)}
-                  className="w-full p-5 text-left flex justify-between items-center group transition-colors"
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setActiveFaq(activeFaq === i ? null : i);
+                    }
+                  }}
+                  className="w-full p-5 text-left flex justify-between items-center group transition-colors cursor-pointer select-none"
+                  aria-expanded={activeFaq === i}
                 >
                   <span className={`font-medium text-sm sm:text-base transition-colors ${activeFaq === i ? 'text-[#FACC15]' : 'text-white group-hover:text-gray-200'}`}>
                     {f.q}
                   </span>
-                  <Icon 
-                    icon={activeFaq === i ? "solar:minus-circle-linear" : "solar:plus-circle-linear"} 
-                    className={`w-5 h-5 shrink-0 transition-transform duration-300 ${activeFaq === i ? 'text-[#FACC15] rotate-180' : 'text-gray-500'}`} 
-                  />
-                </button>
+                  <div className={`w-5 h-5 shrink-0 flex items-center justify-center transition-transform duration-300 ${activeFaq === i ? 'text-[#FACC15] rotate-45' : 'text-gray-500'}`}>
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+                    </svg>
+                  </div>
+                </div>
                 <div className={`transition-all duration-300 ease-in-out ${activeFaq === i ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'}`}>
                   <div className="p-5 pt-0 text-gray-400 text-xs sm:text-sm leading-relaxed border-t border-white/5 mt-1 font-light">
                     {f.a}
